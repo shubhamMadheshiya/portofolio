@@ -2,7 +2,7 @@ import React from "react";
 import ProjectCard from "../components/ProjectCard";
 import { Grid, Stack, Typography } from "@mui/material";
 import { mernStack } from "../data/portofolio";
-console.log(mernStack)
+
 
 const Portofolio = () => {
   return (
