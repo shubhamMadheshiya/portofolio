@@ -22,8 +22,6 @@ const mailgun = new MailgunService().init();
 exports.sendEmail = async (type,name, email, message) => {
   try {
     const messages = prepareTemplate(type, name, email, message);
-
-	console.log(messages)
  
     const config = {
       from: `MyPortfolio! <${email}>`,
