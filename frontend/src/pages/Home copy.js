@@ -1,6 +1,6 @@
-import { Avatar, Box, Grid, Paper, Stack, Typography } from "@mui/material";
+import { Avatar, Box, Grid, Paper, Stack, Typography, useTheme } from "@mui/material";
 import React from "react";
-// Import the skills array
+import {ReactTyped} from "react-typed"; // Correct import for ReactTyped
 import skills from "../data/mySkills";
 import tools from "../data/tools";
 import expertise from "../data/expertise";
@@ -10,13 +10,13 @@ import background from "../assets/background.png";
 import ExpertiseCard from "../components/ExpertiseCard";
 import { Assignment } from "@mui/icons-material";
 import { Link } from "react-router-dom";
-import { ReactTyped } from "react-typed";
 import myData from "../data/myData";
+
 const Home = () => {
-  const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    const theme = useTheme();
   return (
-    <Stack>
-      <Paper sx={{ borderRadius: 4, p: 4 }}>
+    <Stack spacing={4} sx={{ p: 4 }}>
+      <Paper sx={{ borderRadius: 4 }}>
         <Box
           sx={{
             position: "relative",
@@ -77,14 +77,14 @@ const Home = () => {
           </Stack>
         </Box>
       </Paper>
+
       <Typography variant="h1" sx={{ mt: 8, mb: 4 }}>
         My Expertise
       </Typography>
-
       <Grid container spacing={2}>
-        {expertise.map((expertise, index) => (
+        {expertise.map((expert, index) => (
           <Grid item xl={4} md={12} sm={12} key={index}>
-            <ExpertiseCard expertise={expertise} />
+            <ExpertiseCard expertise={expert} />
           </Grid>
         ))}
       </Grid>
@@ -104,18 +104,16 @@ const Home = () => {
             component={Link}
             to={skill.link}
             key={index}
-            target="_blank" // Open link in new tab
-            rel="noopener noreferrer" // Necessary for security
+            target="_blank"
+            rel="noopener noreferrer"
             sx={{
               textDecoration: "none",
-              // maxWidth:'',
               gap: 1,
               display: "flex",
               justifyContent: "space-between",
               flexDirection: "row",
-              alignItems: "center", // Ensure items are vertically centered
-              p: 1, // Add some padding for better appearance
-
+              alignItems: "center",
+              p: 1,
               px: 1,
               pr: 2,
               borderRadius: 16,
@@ -150,18 +148,16 @@ const Home = () => {
             component={Link}
             key={index}
             to={tool.link}
-            target="_blank" // Open link in new tab
-            rel="noopener noreferrer" // Necessary for security
+            target="_blank"
+            rel="noopener noreferrer"
             sx={{
-              // maxWidth:'',
               textDecoration: "none",
               gap: 1,
               display: "flex",
               justifyContent: "space-between",
               flexDirection: "row",
-              alignItems: "center", // Ensure items are vertically centered
-              p: 1, // Add some padding for better appearance
-
+              alignItems: "center",
+              p: 1,
               px: 1,
               pr: 2,
               borderRadius: 16,
@@ -182,17 +178,14 @@ const Home = () => {
       </Typography>
       <Grid container spacing={2}>
         {certificates.map((certificate, index) => (
-          <Grid item xl={4} md={6} sm={12}>
+          <Grid item xl={4} md={6} sm={12} key={index}>
             <Box
-              key={index}
               sx={{
                 gap: 2,
                 display: "flex",
-                //   justifyContent: "space-between",
                 flexDirection: "row",
-                alignItems: "center", // Ensure items are vertically centered
-                p: 1, // Add some padding for better appearance
-
+                alignItems: "center",
+                p: 1,
                 px: 2,
               }}
             >
@@ -202,7 +195,7 @@ const Home = () => {
                   width: 68,
                   height: 60,
                   border: "1px solid gray",
-                  borderColor: "text.seconary",
+                  borderColor: "text.secondary",
                 }}
                 variant="rounded"
                 src={certificate.logo}
@@ -210,8 +203,8 @@ const Home = () => {
               <Stack spacing={1}>
                 <Typography
                   component={Link}
-                  target="_blank" // Open link in new tab
-                  rel="noopener noreferrer" // Necessary for security
+                  target="_blank"
+                  rel="noopener noreferrer"
                   to={certificate.url}
                   variant="h3"
                   color="text.secondary"

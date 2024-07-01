@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, "/public")));
 
 // Route to handle form submission
 app.use("/", require("./src/router/root"));
-app.post("/api/contact", require("./src/router/contact"));
+app.use("/contact", require("./src/router/contact"));
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);

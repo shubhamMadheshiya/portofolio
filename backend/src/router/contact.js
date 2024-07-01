@@ -1,12 +1,13 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const path = require('path');
+const path = require("path");
 const keys = require("../config/keys");
 const mailgun = require("../services/mailgun");
 
-router.get("contact", async (req, res) => {
+router.post("/", async (req, res) => {
   const { name, email, message } = req.body;
   try {
+    console.log("pppppppppppp");
     const result = await mailgun.sendEmail("contact", name, email, message);
     return res.status(200).json({
       success: true,
