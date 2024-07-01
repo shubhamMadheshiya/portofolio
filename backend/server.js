@@ -6,6 +6,7 @@ const app = express();
 const corsOptions = require("./src/config/corsOptions");
 const keys = require("./src/config/keys");
 const mailgun = require("./src/services/mailgun");
+const path = require("path");
 
 
 
@@ -13,7 +14,9 @@ const PORT = keys.port;
 
 // Middleware
 app.use(cors(corsOptions));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(express.static(path.join(__dirname, "/public")));
 
 
 // Route to handle form submission
