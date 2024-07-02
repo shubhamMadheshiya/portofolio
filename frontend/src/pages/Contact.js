@@ -129,7 +129,7 @@ const Contact = () => {
                     to={myData.linkedIn}
                     target="_blank"
                     rel="noopener noreferrer"
-                    sx={{ color: "primary.contrastText" }}
+                    sx={{ color: "text.primary" }}
                   >
                     @shubham-maddheshiya07
                   </MuiLink>

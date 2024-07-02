@@ -1,7 +1,9 @@
 import React from "react";
 import ProjectCard from "../components/ProjectCard";
 import { Grid, Stack, Typography } from "@mui/material";
-import { mernStack } from "../data/portofolio";
+import { graphic, mernStack, Ui } from "../data/portofolio";
+import UiCard from "../components/UiCard";
+import Graphic from "../components/Graphic";
 
 
 const Portofolio = () => {
@@ -12,23 +14,34 @@ const Portofolio = () => {
       </Typography>
 
       <Grid container spacing={4}>
-        {mernStack.map((card) => (
-          <Grid item xl={4} md={12} sm={12}>
+        {mernStack.map((card, index) => (
+          <Grid key={index} item xl={4} md={12} sm={12}>
             <ProjectCard card={card} />
           </Grid>
         ))}
       </Grid>
 
-      {/* <Typography sx={{ mt: 8, mb: 4 }} variant="h1">
+      <Typography sx={{ mt: 8, mb: 4 }} variant="h1">
         UI/ UX
       </Typography>
       <Grid container spacing={4}>
-        {array.map((card) => (
-          <Grid item xl={4} md={12} sm={12}>
-            <ProjectCard />
+        {Ui.map((card, index) => (
+          <Grid item key={index} xl={4} md={12} sm={12}>
+            <UiCard card={card} />
           </Grid>
         ))}
-      </Grid> */}
+      </Grid>
+
+      <Typography sx={{ mt: 8, mb: 4 }} variant="h1">
+        Graphic Design
+      </Typography>
+      <Grid container spacing={4}>
+        {graphic.map((card, index) => (
+          <Grid item key={index} xl={4} md={12} sm={12}>
+            <Graphic card={card} />
+          </Grid>
+        ))}
+      </Grid>
     </Stack>
   );
 };

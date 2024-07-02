@@ -4,7 +4,7 @@ import React from "react";
 const Footer = () => {
   return (
     <Stack alignItems="center" marginTop="auto" pt={8} spacing={8}>
-      <h6>© All rights reserved Viabletrips. Powered By Weband Technology </h6>
+      <h6>Made with ❤️ by Shubham Maddheshiya</h6>
     </Stack>
   );
 };

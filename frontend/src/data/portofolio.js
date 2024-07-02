@@ -1,5 +1,3 @@
-
-
 const mernStack = [
   {
     thumbnail: "https://i.ibb.co/ZcGw4Zh/Screenshot-64.png",
@@ -18,6 +16,25 @@ const mernStack = [
     ],
     liveLink: "https://tommato.onrender.com",
     github: "https://github.com/shubhamMadheshiya/food-del.git",
+    duration: "May 2022 - Jun 2022",
+    readingTime: 4,
+    listDis: [
+      "Implemented an AI chatbot to enhance customer interaction and provide instant support",
+      "Developed an AI trip itinerary planner to automate travel planning and improve user experience",
+      "Conducted comprehensive case studies to gather detailed insights into user needs and project requirements",
+      "Created detailed wireframes and strategic plans to ensure project alignment with user requirements and business goals",
+      "Ensured a thorough understanding of user requirements through continuous user feedback and analysis",
+      "Used Figma to craft visually appealing and user-friendly UIs for both mobile and web applications",
+      "Iterated on design prototypes to refine and optimize user experience based on feedback and usability testing",
+      "Developed robust frontend components using React.js to create dynamic and responsive user interfaces",
+      "Employed Redux Toolkit to manage application state efficiently and ensure smooth data flow",
+      "Utilized RTK Query for efficient and scalable API interactions to streamline data fetching and caching",
+      "Engineered backend solutions using Node.js and Express to handle server-side logic and RESTful APIs",
+      "Managed and optimized databases with MongoDB and Mongoose to ensure efficient data storage and retrieval",
+      "Streamlined internal operations with an intuitive admin panel to facilitate easy management and monitoring",
+      "Implemented Redux Persist and refresh tokens to enhance security and provide a seamless user experience",
+      "Used Firebase for Google authorization and storage to ensure secure authentication and data management",
+    ],
   },
   {
     thumbnail: "https://i.ibb.co/vZ2Kmzg/30-06-2024-13-30-02-REC.png",
@@ -34,8 +51,27 @@ const mernStack = [
       "Redux",
       "Mongoose",
     ],
+    duration: "May 2022 - Jun 2022",
     liveLink: "https://tommmato-admin.onrender.com",
     github: "https://github.com/shubhamMadheshiya/food-del.git",
+    readingTime: 4,
+    listDis: [
+      "Implemented an AI chatbot to enhance customer interaction and provide instant support",
+      "Developed an AI trip itinerary planner to automate travel planning and improve user experience",
+      "Conducted comprehensive case studies to gather detailed insights into user needs and project requirements",
+      "Created detailed wireframes and strategic plans to ensure project alignment with user requirements and business goals",
+      "Ensured a thorough understanding of user requirements through continuous user feedback and analysis",
+      "Used Figma to craft visually appealing and user-friendly UIs for both mobile and web applications",
+      "Iterated on design prototypes to refine and optimize user experience based on feedback and usability testing",
+      "Developed robust frontend components using React.js to create dynamic and responsive user interfaces",
+      "Employed Redux Toolkit to manage application state efficiently and ensure smooth data flow",
+      "Utilized RTK Query for efficient and scalable API interactions to streamline data fetching and caching",
+      "Engineered backend solutions using Node.js and Express to handle server-side logic and RESTful APIs",
+      "Managed and optimized databases with MongoDB and Mongoose to ensure efficient data storage and retrieval",
+      "Streamlined internal operations with an intuitive admin panel to facilitate easy management and monitoring",
+      "Implemented Redux Persist and refresh tokens to enhance security and provide a seamless user experience",
+      "Used Firebase for Google authorization and storage to ensure secure authentication and data management",
+    ],
   },
   {
     thumbnail: "https://i.ibb.co/WWsPgbm/Screenshot-63.png",
@@ -44,7 +80,26 @@ const mernStack = [
       "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
     skills: ["Java Script", "React", "Material UI", "JSX", "CSS"],
     liveLink: "https://myapp-tw9f.onrender.com/",
+    duration: "May 2022 - Jun 2022",
     github: "https://github.com/shubhamMadheshiya/weather_app.git",
+    readingTime: 4,
+    listDis: [
+      "Implemented an AI chatbot to enhance customer interaction and provide instant support",
+      "Developed an AI trip itinerary planner to automate travel planning and improve user experience",
+      "Conducted comprehensive case studies to gather detailed insights into user needs and project requirements",
+      "Created detailed wireframes and strategic plans to ensure project alignment with user requirements and business goals",
+      "Ensured a thorough understanding of user requirements through continuous user feedback and analysis",
+      "Used Figma to craft visually appealing and user-friendly UIs for both mobile and web applications",
+      "Iterated on design prototypes to refine and optimize user experience based on feedback and usability testing",
+      "Developed robust frontend components using React.js to create dynamic and responsive user interfaces",
+      "Employed Redux Toolkit to manage application state efficiently and ensure smooth data flow",
+      "Utilized RTK Query for efficient and scalable API interactions to streamline data fetching and caching",
+      "Engineered backend solutions using Node.js and Express to handle server-side logic and RESTful APIs",
+      "Managed and optimized databases with MongoDB and Mongoose to ensure efficient data storage and retrieval",
+      "Streamlined internal operations with an intuitive admin panel to facilitate easy management and monitoring",
+      "Implemented Redux Persist and refresh tokens to enhance security and provide a seamless user experience",
+      "Used Firebase for Google authorization and storage to ensure secure authentication and data management",
+    ],
   },
   {
     thumbnail: "https://i.ibb.co/X3DNLZ8/30-06-2024-07-37-26-REC.png",
@@ -53,8 +108,51 @@ const mernStack = [
       "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
     skills: ["Java Script", "React", "Material UI", "JSX", "CSS"],
     liveLink: "https://todo-app-vsvl.onrender.com/",
+    duration: "May 2022 - Jun 2022",
     github: "https://github.com/shubhamMadheshiya/Todo-App.git",
+    readingTime: 4,
+    listDis: [
+      "Implemented an AI chatbot to enhance customer interaction and provide instant support",
+      "Developed an AI trip itinerary planner to automate travel planning and improve user experience",
+      "Conducted comprehensive case studies to gather detailed insights into user needs and project requirements",
+      "Created detailed wireframes and strategic plans to ensure project alignment with user requirements and business goals",
+      "Ensured a thorough understanding of user requirements through continuous user feedback and analysis",
+      "Used Figma to craft visually appealing and user-friendly UIs for both mobile and web applications",
+      "Iterated on design prototypes to refine and optimize user experience based on feedback and usability testing",
+      "Developed robust frontend components using React.js to create dynamic and responsive user interfaces",
+      "Employed Redux Toolkit to manage application state efficiently and ensure smooth data flow",
+      "Utilized RTK Query for efficient and scalable API interactions to streamline data fetching and caching",
+      "Engineered backend solutions using Node.js and Express to handle server-side logic and RESTful APIs",
+      "Managed and optimized databases with MongoDB and Mongoose to ensure efficient data storage and retrieval",
+      "Streamlined internal operations with an intuitive admin panel to facilitate easy management and monitoring",
+      "Implemented Redux Persist and refresh tokens to enhance security and provide a seamless user experience",
+      "Used Firebase for Google authorization and storage to ensure secure authentication and data management",
+    ],
   },
 ];
 
-export { mernStack };
+const Ui = [
+  {
+    name: "ViableTrips Case Study",
+    shortDis:
+      "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+    skills: ["Figma", "Sketch", " Adobe Illustrator ", "Adobe Photoshop"],
+    liveLink:
+      "https://www.figma.com/proto/G7JwatTKCHr2C1eljXDIeq/viable_trip?page-id=0%3A1&type=design&node-id=170-100&viewport=-5286%2C4288%2C0.63&t=oHXXnPOzOoymYw2H-1&scaling=scale-down&starting-point-node-id=172%3A110&content-scaling=fixed",
+    duration: "May 2022 - Jun 2022",
+
+    iframe: "https://www.behance.net/embed/project/201400989?ilo0=1",
+    more: "https://www.behance.net/gallery/201400989/ViableTrips",
+  },
+];
+
+const graphic = [
+  {
+    name: "Graphic Design Work",
+    skills: ["Figma", "Sketch", " Adobe Illustrator ", "Adobe Photoshop"],
+    iframe: "https://www.behance.net/embed/project/202291537?ilo0=1",
+    more: "https://www.behance.net/gallery/202291537/Graphic-Design",
+  },
+];
+
+export { mernStack, Ui, graphic };
