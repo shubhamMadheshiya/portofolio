@@ -52,8 +52,8 @@ const theme = (mode) =>
         hint: mode === "dark" ? "#78909c" : "#cfd8dc", // Example hint text color based on mode
       },
       background: {
-        default: mode === "dark" ? "#001E2B" : "#FFFFFF",
-        paper: mode === "dark" ? "#112733" : "#F5F5F5",
+        default: mode === "dark" ? "#001E2B" : "#F4F6F8",
+        paper: mode === "dark" ? "#112733" : "#FFFFFF",
       },
       hover: {
         primary: {

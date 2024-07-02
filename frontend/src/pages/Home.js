@@ -214,7 +214,7 @@ const Home = () => {
                   rel="noopener noreferrer" // Necessary for security
                   to={certificate.url}
                   variant="h3"
-                  color="text.secondary"
+                  color="text.primary"
                   sx={{ "&:hover": { color: "primary.main" } }}
                 >
                   {certificate.name}
