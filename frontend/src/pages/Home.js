@@ -50,7 +50,7 @@ const Home = () => {
               position: "relative",
               zIndex: 2,
               minHeight: "100%",
-              p: 8,
+            
             }}
           >
             <Typography variant="h1" sx={{ mb: 4, color: "white" }}>
