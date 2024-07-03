@@ -82,13 +82,23 @@ const Contact = () => {
         <Grid item xl={6} lg={6} md={12} sm={12} xs={12}>
           <Paper sx={{ borderRadius: 4, p: 4 }}>
             <Stack spacing={2}>
-              <Stack direction="row" justifyContent="space-between">
+              <Stack
+                direction="row"
+                justifyContent="space-between"
+                flexWrap="wrap"
+                rowGap={1}
+              >
                 <Typography variant="h3" color="primary.main">
                   Country:
                 </Typography>
                 <Typography variant="h3">{myData.residence}</Typography>
               </Stack>
-              <Stack direction="row" justifyContent="space-between">
+              <Stack
+                direction="row"
+                justifyContent="space-between"
+                flexWrap="wrap"
+                rowGap={1}
+              >
                 <Typography variant="h3" color="primary.main">
                   City:
                 </Typography>
@@ -108,7 +118,12 @@ const Contact = () => {
         <Grid item xl={6} lg={6} md={12} sm={12} xs={12}>
           <Paper sx={{ borderRadius: 4, p: 4 }}>
             <Stack spacing={2}>
-              <Stack direction="row" justifyContent="space-between">
+              <Stack
+                direction="row"
+                justifyContent="space-between"
+                flexWrap="wrap"
+                rowGap={1}
+              >
                 <Typography variant="h3" color="primary.main">
                   Email:
                 </Typography>
@@ -135,7 +150,12 @@ const Contact = () => {
                   </MuiLink>
                 </Typography>
               </Stack>
-              <Stack direction="row" justifyContent="space-between">
+              <Stack
+                direction="row"
+                justifyContent="space-between"
+                flexWrap="wrap"
+                rowGap={1}
+              >
                 <Typography variant="h3" color="primary.main">
                   Mobile Number:
                 </Typography>

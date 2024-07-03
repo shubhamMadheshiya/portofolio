@@ -25,6 +25,7 @@ const Home = () => {
             minHeight: "280px",
             zIndex: 0,
             borderRadius: 4,
+            display:{xs:'none', sm:'block'}
           }}
         >
           <Box
