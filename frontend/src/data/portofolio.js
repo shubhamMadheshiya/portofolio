@@ -121,7 +121,7 @@ const Ui = [
   {
     name: "ViableTrips Case Study",
     shortDis:
-      "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+      "The Viabletrips case study details the design and development process of a travel platform that connects users with local travel buddies, offering personalized itineraries, authentic experiences, easy booking, and budget-friendly trip planning, all enhanced by AI.",
     skills: ["Figma", "Sketch", " Adobe Illustrator ", "Adobe Photoshop"],
     liveLink:
       "https://www.figma.com/proto/G7JwatTKCHr2C1eljXDIeq/viable_trip?page-id=0%3A1&type=design&node-id=170-100&viewport=-5286%2C4288%2C0.63&t=oHXXnPOzOoymYw2H-1&scaling=scale-down&starting-point-node-id=172%3A110&content-scaling=fixed",
@@ -136,6 +136,7 @@ const graphic = [
   {
     name: "Graphic Design Work",
     skills: ["Figma", "Sketch", " Adobe Illustrator ", "Adobe Photoshop"],
+    shortDis:"In my graphic design project, I created a cohesive branding package, including logos, posters, and social media graphics, for a new startup. The project showcases my skills in Adobe Photoshop and Illustrator, highlighting my ability to deliver visually compelling and professional designs.",
     iframe: "https://www.behance.net/embed/project/202291537?ilo0=1",
     more: "https://www.behance.net/gallery/202291537/Graphic-Design",
   },
