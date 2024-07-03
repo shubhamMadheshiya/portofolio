@@ -16,7 +16,9 @@ const Home = () => {
   const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   return (
     <Stack>
-      <Paper sx={{ borderRadius: 4, p: 4 }}>
+      <Paper
+        sx={{ borderRadius: 4, p: 4, display: { xs: "none", sm: "block" } }}
+      >
         <Box
           sx={{
             position: "relative",
@@ -25,7 +27,6 @@ const Home = () => {
             minHeight: "280px",
             zIndex: 0,
             borderRadius: 4,
-            display:{xs:'none', sm:'block'}
           }}
         >
           <Box
