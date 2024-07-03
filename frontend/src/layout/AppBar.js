@@ -249,7 +249,7 @@ export default function MiniDrawer() {
         <Toolbar>
         <Stack direction='row' spacing={2} alignItems='center'>
           <Avatar sx={{height:28, width:28}} src={myData.profilePic} alt={myData.name}/>
-          <Typography variant="h2">{myData.name}</Typography>
+          <Typography variant="h3">{myData.name}</Typography>
         </Stack>
           {/* <IconButton
             color="inherit"

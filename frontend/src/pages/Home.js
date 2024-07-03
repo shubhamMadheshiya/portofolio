@@ -17,9 +17,11 @@ const Home = () => {
   return (
     <Stack>
       <Paper
-        sx={{ borderRadius: 4, p: 4,
-        //  display: { xs: "none", sm: "block" }
-          }}
+        sx={{
+          borderRadius: 4,
+          p: 4,
+          //  display: { xs: "none", sm: "block" }
+        }}
       >
         <Box
           sx={{
@@ -49,14 +51,22 @@ const Home = () => {
             sx={{
               position: "relative",
               zIndex: 2,
-              minHeight: "100%",
-            
+              minHeight: "280px",
             }}
           >
-            <Typography variant="h1" sx={{ mb: 4, color: "white" }}>
+            <Typography
+              alignItems="center"
+              variant="h1"
+              sx={{ mb: 4, color: "white" }}
+            >
               Hello, Check This Out!
             </Typography>
-            <Stack direction="row" spacing={1} alignItems="center">
+            <Stack
+              direction="row"
+              spacing={1}
+              alignItems="center"
+              justifyContent="center"
+            >
               <Typography variant="h3" color="primary">
                 {"</div>"}
               </Typography>
