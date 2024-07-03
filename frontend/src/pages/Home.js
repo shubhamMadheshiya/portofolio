@@ -67,14 +67,14 @@ const Home = () => {
               alignItems="center"
               justifyContent="center"
             >
-              <Typography variant="h3" color="primary">
+              {/* <Typography variant="h3" color="primary">
                 {"</div>"}
-              </Typography>
+              </Typography> */}
               <Typography
                 variant="h3"
-                color="text.main"
+                color="primary.main"
                 fontWeight={600}
-                fontFamily="Helvetica Neue"
+                fontFamily="Anonymous Pro"
               >
                 <ReactTyped
                   strings={myData.iAm}
@@ -84,9 +84,9 @@ const Home = () => {
                   // style={{ color: theme.palette.primary.main }}
                 />
               </Typography>
-              <Typography variant="h3" color="primary">
+              {/* <Typography variant="h3" color="primary">
                 {"</div>"}
-              </Typography>
+              </Typography> */}
             </Stack>
           </Stack>
         </Box>
