@@ -195,6 +195,7 @@ export default function MiniDrawer() {
   const handleClose = () => setAnchorEl(null);
 
   const handleClick = (arg) => {
+     setOpenRightMini(!openRightMini);
     setIsClicked(arg);
   };
 
