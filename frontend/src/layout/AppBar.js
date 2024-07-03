@@ -1,6 +1,7 @@
 import * as React from "react";
 import { useTheme } from "@mui/material/styles";
 import LeftDrawer from "../components/LeftDrawer";
+import MuiAppBar from "@mui/material/AppBar";
 
 import {
   Box,
@@ -17,6 +18,7 @@ import {
   Stack,
   styled,
   Switch,
+  Typography,
 } from "@mui/material";
 import MuiDrawer from "@mui/material/Drawer";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -27,8 +29,11 @@ import { useSelector, useDispatch } from "react-redux";
 import { toggleTheme, selectThemeMode } from "../theme/themeSlice";
 import {
   Article,
+  Close,
   GitHub,
   Home,
+  KeyboardArrowRight,
+  MenuOpen,
   Work,
   WorkspacePremium,
 } from "@mui/icons-material";
@@ -80,6 +85,25 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     backgroundColor: theme.palette.mode === "dark" ? "#8796A5" : "#aab4be",
     borderRadius: 20 / 2,
   },
+}));
+
+
+const AppBar = styled(MuiAppBar, {
+  shouldForwardProp: (prop) => prop !== "open",
+})(({ theme, open }) => ({
+  zIndex: theme.zIndex.drawer + 1,
+  transition: theme.transitions.create(["width", "margin"], {
+    easing: theme.transitions.easing.sharp,
+    duration: theme.transitions.duration.leavingScreen,
+  }),
+  ...(open && {
+    marginRight: drawerWidth,
+    width: `calc(100% - ${drawerWidth}px)`,
+    transition: theme.transitions.create(["width", "margin"], {
+      easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+  }),
 }));
 
 const drawerWidth = 240;
@@ -137,6 +161,7 @@ export default function MiniDrawer() {
   const [open, setOpen] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [isClicked, setIsClicked] = React.useState(0);
+  const [openRightMini, setOpenRightMini] = React.useState(false);
   const openMenu = Boolean(anchorEl);
   const dispatch = useDispatch();
   const themeMode = useSelector(selectThemeMode);
@@ -159,6 +184,10 @@ export default function MiniDrawer() {
   const toggleDarkMode = () => {
     dispatch(toggleTheme());
   };
+
+  const handleRightMiniDrawerOpen=()=>{
+    setOpenRightMini(!openRightMini);
+  }
 
   const handleDrawerOpen = () => setOpen(true);
   const handleDrawerClose = () => setOpen(false);
@@ -205,6 +234,39 @@ export default function MiniDrawer() {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
+      <AppBar
+        position="fixed"
+        open={open}
+        sx={{
+          display: { xs: "block", sm: "none" },
+          width: { sm: `calc(100% - ${leftDrawerWidth}px)` },
+          ml: { sm: `${leftDrawerWidth}px` },
+        }}
+      >
+        <Toolbar>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            edge="start"
+            onClick={handleLeftDrawerToggle}
+            sx={{ mr: 2, display: { sm: "none" } }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            onClick={handleRightMiniDrawerOpen}
+            edge="start"
+            sx={{
+              marginLeft: "auto",
+              ...(open && { display: "none" }),
+            }}
+          >
+            {openRightMini ? <KeyboardArrowRight /> : <MenuOpen />}
+          </IconButton>
+        </Toolbar>
+      </AppBar>
 
       <Box
         component="nav"
@@ -246,7 +308,8 @@ export default function MiniDrawer() {
       </Box>
 
       <MainContent />
-      <MainDrawer
+      <RightDrawer
+        sx={{ display: "none" }}
         theme={theme}
         open={open}
         handleClick={handleClick}
@@ -260,28 +323,40 @@ export default function MiniDrawer() {
         anchorEl={anchorEl}
         themeMode={themeMode}
         handleDrawerOpen={handleDrawerOpen}
+        openRightMini={openRightMini}
       />
     </Box>
   );
 }
 
-function MainDrawer({
-  theme,
+function RightDrawer({
+  // theme,
   open,
   handleDrawerClose,
   ListData,
   isClicked,
   handleClick,
-  openMenu,
-  handleMenu,
-  handleClose,
-  anchorEl,
+  // openMenu,
+  // handleMenu,
+  // handleClose,
+  // anchorEl,
   toggleDarkMode,
   themeMode,
   handleDrawerOpen,
+  openRightMini,
 }) {
   return (
-    <Drawer variant="permanent" open={open} anchor="right">
+    <Drawer
+      variant="permanent"
+      open={open}
+      anchor="right"
+      sx={{
+        display: {
+          xs: openRightMini ? "block" : "none",
+          sm: "block",
+        },
+      }}
+    >
       <DrawerHeader
         sx={{
           display: "flex",
@@ -387,7 +462,7 @@ function MainContent() {
         },
       }}
     >
-      {/* <DrawerHeader /> */}
+      <DrawerHeader sx={{ display: { xs: "block", sm: "none" } }} />
       <Outlet />
       <Footer />
     </Stack>
