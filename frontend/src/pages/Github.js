@@ -245,7 +245,7 @@ const GitHubStats = () => {
               Repositories
             </Typography>
             <Grid container spacing={2}>
-              <Grid item xl={8} lg={8} md={8} sm={8} xs={8}>
+              <Grid item xl={8} lg={8} md={8} sm={12} xs={12}>
                 <Box mb={2}>
                   <TextField
                     label="Search Repos"
@@ -263,10 +263,10 @@ const GitHubStats = () => {
                   />
                 </Box>
               </Grid>
-              <Grid item xl={2} lg={2} md={2} sm={2} xs={2}>
+              <Grid item xl={2} lg={2} md={2} sm={6} xs={6}>
                 <Box mb={2}>
                   <FormControl fullWidth variant="outlined">
-                    <InputLabel>Filter by Language</InputLabel>
+                    <InputLabel>Language</InputLabel>
                     <Select
                       value={filter}
                       onChange={handleFilterChange}
@@ -284,7 +284,7 @@ const GitHubStats = () => {
                   </FormControl>
                 </Box>
               </Grid>
-              <Grid item xl={2} lg={2} md={2} sm={2} xs={2}>
+              <Grid item xl={2} lg={2} md={2} sm={6} xs={6}>
                 <Box mb={2}>
                   <FormControl fullWidth variant="outlined">
                     <InputLabel>Sort by</InputLabel>
