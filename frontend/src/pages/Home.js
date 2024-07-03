@@ -28,7 +28,7 @@ const Home = () => {
             position: "relative",
             backgroundImage: `url(${background})`,
             backgroundSize: "cover",
-            minHeight: "280px",
+            minHeight: { xs: "200px", md: "280px" },
             zIndex: 0,
             borderRadius: 4,
           }}
@@ -51,11 +51,13 @@ const Home = () => {
             sx={{
               position: "relative",
               zIndex: 2,
-              minHeight: "280px",
+              minHeight: { xs: "200px", md: "280px" },
+              px: 2,
             }}
           >
             <Typography
               alignItems="center"
+              textAlign="center"
               variant="h1"
               sx={{ mb: 4, color: "white" }}
             >
