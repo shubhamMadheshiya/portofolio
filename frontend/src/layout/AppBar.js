@@ -19,6 +19,7 @@ import {
   styled,
   Switch,
   Typography,
+  Avatar,
 } from "@mui/material";
 import MuiDrawer from "@mui/material/Drawer";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -39,6 +40,7 @@ import {
 } from "@mui/icons-material";
 import { Link, Outlet } from "react-router-dom";
 import Footer from "./Footer";
+import myData from "../data/myData";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -245,7 +247,11 @@ export default function MiniDrawer() {
         }}
       >
         <Toolbar>
-          <IconButton
+        <Stack direction='row' spacing={2} alignItems='center'>
+          <Avatar sx={{height:28, width:28}} src={myData.profilePic} alt={myData.name}/>
+          <Typography variant="h3">{myData.name}</Typography>
+        </Stack>
+          {/* <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="start"
@@ -253,7 +259,7 @@ export default function MiniDrawer() {
             sx={{ mr: 2, display: { sm: "none" } }}
           >
             <MenuIcon />
-          </IconButton>
+          </IconButton> */}
           <IconButton
             color="inherit"
             aria-label="open drawer"

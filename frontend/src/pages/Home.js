@@ -17,7 +17,9 @@ const Home = () => {
   return (
     <Stack>
       <Paper
-        sx={{ borderRadius: 4, p: 4, display: { xs: "none", sm: "block" } }}
+        sx={{ borderRadius: 4, p: 4,
+        //  display: { xs: "none", sm: "block" }
+          }}
       >
         <Box
           sx={{
