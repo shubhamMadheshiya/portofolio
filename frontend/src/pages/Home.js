@@ -57,7 +57,7 @@ const Home = () => {
                 {"</div>"}
               </Typography>
               <Typography
-                variant="h2"
+                variant="h3"
                 color="text.main"
                 fontWeight={600}
                 fontFamily="Helvetica Neue"
