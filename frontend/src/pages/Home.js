@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 import { ReactTyped } from "react-typed";
 import myData from "../data/myData";
 const Home = () => {
-  const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+ 
   return (
     <Stack>
       <Paper
