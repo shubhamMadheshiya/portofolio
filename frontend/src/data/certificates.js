@@ -19,6 +19,12 @@ const certificates = [
     logo: udemy,
     url: "http://ude.my/UC-f99b6f24-ff0c-46b1-8507-86f913ff8d62",
   },
+  {
+    name: "Node.js, Express, MongoDB & More: The Complete Bootcamp",
+    id: "UC-bd986d66-1665-4586-9c54-ad8c8d206801",
+    logo: udemy,
+    url: "http://ude.my/UC-bd986d66-1665-4586-9c54-ad8c8d206801",
+  },
 ];
 
 export default certificates
