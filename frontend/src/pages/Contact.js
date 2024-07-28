@@ -1,5 +1,17 @@
-import { Avatar, Paper, Stack, Typography } from "@mui/material";
 import React, { useState } from "react";
+import {
+  Avatar,
+  Paper,
+  Stack,
+  Typography,
+  Grid,
+  IconButton,
+  Link as MuiLink,
+  TextField,
+  Button,
+  Container,
+  CircularProgress,
+} from "@mui/material";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,18 +20,10 @@ import {
   faDribbbleSquare,
 } from "@fortawesome/free-brands-svg-icons";
 import { useTheme } from "@mui/material";
-import myData from "../data/myData";
-import {
-  Grid,
-  IconButton,
-  Link as MuiLink,
-  TextField,
-  Button,
-  Container,
-} from "@mui/material";
 import { Mail, Send } from "@mui/icons-material";
-import { faEnvelope, faMailBulk } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
+import myData from "../data/myData";
 
 const Contact = () => {
   const theme = useTheme();
@@ -31,6 +35,7 @@ const Contact = () => {
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const validate = () => {
     let tempErrors = {};
@@ -46,6 +51,7 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
+      setLoading(true); // Set loading to true when the form is submitted
       axios
         .post(process.env.REACT_APP_API_URL, formData)
         .then((response) => {
@@ -61,6 +67,9 @@ const Contact = () => {
           setErrorMessage(
             "There was an error sending your message. Please try again."
           );
+        })
+        .finally(() => {
+          setLoading(false); // Set loading to false when the request is complete
         });
     }
   };
@@ -262,8 +271,13 @@ const Contact = () => {
               error={!!errors.message}
               helperText={errors.message}
             />
-            <Button variant="contained" type="submit" endIcon={<Send />}>
-              SEND
+            <Button
+              variant="contained"
+              type="submit"
+              endIcon={loading ? <CircularProgress size={24} /> : <Send />}
+              disabled={loading} // Disable the button while loading
+            >
+              {loading ? "Sending..." : "SEND"}
             </Button>
           </Stack>
           {successMessage && (
