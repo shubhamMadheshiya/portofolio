@@ -38,7 +38,7 @@ const Portofolio = () => {
       <Grid container spacing={4}>
         {Ui.map((card, index) => (
           <Grid item key={index} xl={4} md={12} sm={12}>
-            <UiCard card={card} buttonText='View Postman Doc' />
+            <UiCard card={card} buttonText={'View Postman Doc'} />
           </Grid>
         ))}
       </Grid>
