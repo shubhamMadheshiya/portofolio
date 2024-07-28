@@ -11,6 +11,8 @@ import {
   Button,
   Container,
   CircularProgress,
+  Snackbar,
+  Alert,
 } from "@mui/material";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -20,7 +22,7 @@ import {
   faDribbbleSquare,
 } from "@fortawesome/free-brands-svg-icons";
 import { useTheme } from "@mui/material";
-import { Mail, Send } from "@mui/icons-material";
+import { Send } from "@mui/icons-material";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import myData from "../data/myData";
@@ -36,6 +38,7 @@ const Contact = () => {
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [loading, setLoading] = useState(false);
+  const [openSnackbar, setOpenSnackbar] = useState(false);
 
   const validate = () => {
     let tempErrors = {};
@@ -58,7 +61,8 @@ const Contact = () => {
           const data = response.data;
           if (data.success) {
             setSuccessMessage(data.message);
-            setFormData({ name: "", email: "", message: "" });
+            setFormData({ name: "", email: "", message: "" }); // Clear form fields
+            setOpenSnackbar(true); // Open Snackbar
           } else {
             setErrorMessage(data.message);
           }
@@ -80,6 +84,10 @@ const Contact = () => {
       ...formData,
       [name]: value,
     });
+  };
+
+  const handleCloseSnackbar = () => {
+    setOpenSnackbar(false);
   };
 
   return (
@@ -274,10 +282,14 @@ const Contact = () => {
             <Button
               variant="contained"
               type="submit"
-              endIcon={loading ? <CircularProgress size={24} /> : <Send />}
+              endIcon={!loading && <Send />}
               disabled={loading} // Disable the button while loading
             >
-              {loading ? "Sending..." : "SEND"}
+              {loading ? (
+                <CircularProgress size={24} color="inherit" />
+              ) : (
+                "SEND"
+              )}
             </Button>
           </Stack>
           {successMessage && (
@@ -288,6 +300,21 @@ const Contact = () => {
           )}
         </Paper>
       </Container>
+
+      {/* Snackbar for success message */}
+      <Snackbar
+        open={openSnackbar}
+        autoHideDuration={6000}
+        onClose={handleCloseSnackbar}
+      >
+        <Alert
+          onClose={handleCloseSnackbar}
+          severity="success"
+          sx={{ width: "100%" }}
+        >
+          {successMessage}
+        </Alert>
+      </Snackbar>
     </Stack>
   );
 };
