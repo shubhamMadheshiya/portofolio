@@ -103,7 +103,7 @@ const mernStack = [
     name: "ToDo App",
     shortDis:
       "ToDo application built with React and Material-UI for a user-friendly interface. Utilizes local storage for data persistence and React hooks for efficient management of tasks, offering seamless CRUD operations for task management.",
-    skills: ["Java Script", "React", "Material UI", "JSX", "CSS", ],
+    skills: ["Java Script", "React", "Material UI", "JSX", "CSS"],
     liveLink: "https://todo-app-vsvl.onrender.com/",
     duration: "May 2022 - Jun 2022",
     github: "https://github.com/shubhamMadheshiya/Todo-App.git",
@@ -117,11 +117,9 @@ const mernStack = [
   },
 ];
 
-
-
 const backend = [
   {
-    thumbnail: "https://i.ibb.co/ZcGw4Zh/Screenshot-64.png",
+    thumbnail: "https://i.ibb.co/41QR1wY/Screenshot-2024-07-28-153741.png",
     name: "Nactor",
     shortDis:
       "Tomato is a food ordering app with a user-friendly interface. Built with React and Material-UI, it uses Redux Toolkit for state management and RTK Query for API calls. Secure authentication and persistent login ensure user data protection and convenience.",
@@ -139,9 +137,10 @@ const backend = [
       "MailGun",
       "Vite",
     ],
-    liveLink: "https://tommato.onrender.com",
-    github: "https://github.com/shubhamMadheshiya/food-del.git",
-    duration: "May 2022 - Jun 2022",
+    liveLink:
+      "https://tommato.onrender.cohttps://documenter.getpostman.com/view/24788238/2sA3kaBeLr",
+    github: "https://github.com/shubhamMadheshiya/Nactor.git",
+    duration: "Jun 2024 - July 2024",
     readingTime: 4,
     listDis: [
       "Implemented a friendly UI to enhance user interaction and provide a seamless user experience",
@@ -161,7 +160,6 @@ const backend = [
       "Used Mailgun to send email notifications to users",
     ],
   },
- 
 ];
 
 const Ui = [
@@ -183,10 +181,11 @@ const graphic = [
   {
     name: "Graphic Design Work",
     skills: ["Figma", "Sketch", " Adobe Illustrator ", "Adobe Photoshop"],
-    shortDis:"In my graphic design project, I created a cohesive branding package, including logos, posters, and social media graphics, for a new startup. The project showcases my skills in Adobe Photoshop and Illustrator, highlighting my ability to deliver visually compelling and professional designs.",
+    shortDis:
+      "In my graphic design project, I created a cohesive branding package, including logos, posters, and social media graphics, for a new startup. The project showcases my skills in Adobe Photoshop and Illustrator, highlighting my ability to deliver visually compelling and professional designs.",
     iframe: "https://www.behance.net/embed/project/202291537?ilo0=1",
     more: "https://www.behance.net/gallery/202291537/Graphic-Design",
   },
 ];
 
-export { mernStack, Ui, graphic,backend };
+export { mernStack, Ui, graphic, backend };
