@@ -1,11 +1,10 @@
-// App.js
 import "./App.css";
-import React, { useState, useEffect } from "react";
 import { ThemeProvider } from "@mui/material/styles";
-import theme from "./theme/theme";
+import theme from "./theme/theme"; // Ensure this file exports a valid MUI theme
 import CssBaseline from "@mui/material/CssBaseline";
-import { useSelector } from "react-redux";
-import { selectThemeMode } from "./theme/themeSlice";
+
+import { useSelector, useDispatch } from "react-redux";
+import { toggleTheme, selectThemeMode } from "./theme/themeSlice";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./layout/Layout";
 import Home from "./pages/Home";
@@ -20,42 +19,29 @@ import SplashScreen from './components/Splashscreen'
 
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
   const themeMode = useSelector(selectThemeMode);
-
-  useEffect(() => {
-    // Simulate a loading delay
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 3000); // Adjust this to however long you want the splash screen to show
-
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
-    <ThemeProvider theme={() => theme(themeMode)}>
-      <CssBaseline />
-      {isLoading ? (
-        <SplashScreen />
-      ) : (
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route index element={<Home />} />
-              <Route path="/portofolio">
-                <Route index element={<Portofolio />} />
-                <Route path="more" element={<More />} />
-              </Route>
-              <Route path="/work" element={<Work />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/github" element={<Github />} />
-              <Route path="/resume" element={<Resume />} />
-              <Route path="*" element={<NoPage />} />
-            </Route>
-          </Routes>
-        </BrowserRouter>
-      )}
-    </ThemeProvider>
+    <SplashScreen />
+    // <ThemeProvider theme={() => theme(themeMode)}>
+    //   <CssBaseline />
+    //   <BrowserRouter>
+    //     <Routes>
+    //       <Route path="/" element={<Layout />}>
+    //         <Route index element={<Home />} />
+    //         <Route path="/portofolio">
+    //           <Route index element={<Portofolio />} />
+    //           <Route path="more" element={<More />} />
+    //         </Route>
+    //         <Route path="/work" element={<Work />} />
+    //         <Route path="/contact" element={<Contact />} />
+    //         <Route path="/github" element={<Github />} />
+    //         <Route path="/resume" element={<Resume />} />
+
+    //         <Route path="*" element={<NoPage />} />
+    //       </Route>
+    //     </Routes>
+    //   </BrowserRouter>
+    // </ThemeProvider>
   );
 }
 
