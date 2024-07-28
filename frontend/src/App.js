@@ -15,18 +15,18 @@ import Contact from "./pages/Contact";
 import Github from "./pages/Github";
 import Resume from "./pages/Resume";
 import More from "./pages/More";
-import SplashScreen from "./components/Splashscreen";
+import SplashScreen from "./SplashScreen";
+import "./SplashScreen.css";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
-  const [fadeClass, setFadeClass] = useState("");
   const themeMode = useSelector(selectThemeMode);
 
   useEffect(() => {
+    // Simulate a loading delay
     const timer = setTimeout(() => {
-      setFadeClass("fade-out");
-      setTimeout(() => setIsLoading(false), 500); // Match this to the CSS transition duration
-    }, 3000);
+      setIsLoading(false);
+    }, 3000); // Adjust this to however long you want the splash screen to show
 
     return () => clearTimeout(timer);
   }, []);
@@ -35,7 +35,7 @@ function App() {
     <ThemeProvider theme={() => theme(themeMode)}>
       <CssBaseline />
       {isLoading ? (
-        <SplashScreen className={fadeClass} />
+        <SplashScreen />
       ) : (
         <BrowserRouter>
           <Routes>
