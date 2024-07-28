@@ -122,7 +122,7 @@ const backend = [
     thumbnail: "https://i.ibb.co/41QR1wY/Screenshot-2024-07-28-153741.png",
     name: "Nactor",
     shortDis:
-      "Tomato is a food ordering app with a user-friendly interface. Built with React and Material-UI, it uses Redux Toolkit for state management and RTK Query for API calls. Secure authentication and persistent login ensure user data protection and convenience.",
+      "Nactor is a food ordering app with a user-friendly interface. Built with React and Material-UI, it uses Redux Toolkit for state management and RTK Query for API calls. Secure authentication and persistent login ensure user data protection and convenience.",
 
     skills: [
       "Java Script",
