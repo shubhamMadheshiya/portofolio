@@ -19,7 +19,7 @@ const Home = () => {
       <Paper
         sx={{
           borderRadius: 4,
-          p: 4,
+          p: 2,
           //  display: { xs: "none", sm: "block" }
         }}
       >
