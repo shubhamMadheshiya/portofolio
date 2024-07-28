@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import { Avatar, Box,  Stack, Tooltip } from "@mui/material";
 import { GitHub } from "@mui/icons-material";
 
-const ProjectCard = ({card}) => {
+const ProjectCard = ({card,buttonText}) => {
   return (
     <Card sx={{ borderRadius: 4 }}>
       <CardMedia
@@ -66,7 +66,7 @@ const ProjectCard = ({card}) => {
               rel="noopener noreferrer"
               to={card.liveLink}
             >
-              View Live
+             { buttonText? buttonText : 'View Live'}
             </Button>
             <Button
               size="small"

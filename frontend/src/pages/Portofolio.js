@@ -1,7 +1,7 @@
 import React from "react";
 import ProjectCard from "../components/ProjectCard";
 import { Grid, Stack, Typography } from "@mui/material";
-import { graphic, mernStack, Ui } from "../data/portofolio";
+import { graphic, mernStack, Ui,backend } from "../data/portofolio";
 import UiCard from "../components/UiCard";
 import Graphic from "../components/Graphic";
 
@@ -20,6 +20,17 @@ const Portofolio = () => {
           </Grid>
         ))}
       </Grid>
+      <Typography sx={{ mt: 4, mb: 4 }} variant="h1">
+        Backend
+      </Typography>
+
+      <Grid container spacing={4}>
+        {backend.map((card, index) => (
+          <Grid key={index} item xl={4} md={12} sm={12}>
+            <ProjectCard card={card} />
+          </Grid>
+        ))}
+      </Grid>
 
       <Typography sx={{ mt: 8, mb: 4 }} variant="h1">
         UI/ UX
@@ -27,7 +38,7 @@ const Portofolio = () => {
       <Grid container spacing={4}>
         {Ui.map((card, index) => (
           <Grid item key={index} xl={4} md={12} sm={12}>
-            <UiCard card={card} />
+            <UiCard card={card} buttonText='View Postman Doc' />
           </Grid>
         ))}
       </Grid>

@@ -117,6 +117,53 @@ const mernStack = [
   },
 ];
 
+
+
+const backend = [
+  {
+    thumbnail: "https://i.ibb.co/ZcGw4Zh/Screenshot-64.png",
+    name: "Nactor",
+    shortDis:
+      "Tomato is a food ordering app with a user-friendly interface. Built with React and Material-UI, it uses Redux Toolkit for state management and RTK Query for API calls. Secure authentication and persistent login ensure user data protection and convenience.",
+
+    skills: [
+      "Java Script",
+      "React",
+      "MUI",
+      "Express",
+      "Node.Js",
+      "MongoDb",
+      "Redux",
+      "Mongoose",
+      "MailChimp",
+      "MailGun",
+      "Vite",
+    ],
+    liveLink: "https://tommato.onrender.com",
+    github: "https://github.com/shubhamMadheshiya/food-del.git",
+    duration: "May 2022 - Jun 2022",
+    readingTime: 4,
+    listDis: [
+      "Implemented a friendly UI to enhance user interaction and provide a seamless user experience",
+      "Used React to build the frontend, ensuring a dynamic and responsive application",
+      "Utilized Material-UI (MUI) for UI design, enabling a modern and visually appealing interface",
+      "Employed Redux Toolkit for state management, ensuring efficient and predictable state updates",
+      "Integrated RTK Query for API calls, maintaining caching and reducing redundant data fetching",
+      "Secured authentication mechanisms to protect user data and ensure safe access to the application",
+      "Implemented persistent login features to provide users with a convenient and continuous experience across sessions",
+      "Designed the backend using Node.js and Express.js to handle server-side logic",
+      "Developed the database using MongoDB and Mongoose for efficient data storage and retrieval",
+      "Implemented JWT token authorization for secure user authentication",
+      "Implemented real-time updates through WebSocket for a responsive user experience",
+      "Implemented refresh tokens to ensure persistent login sessions",
+      "Integrated Stripe for secure payment processing",
+      "Automated export of user credentials to Mailchimp for email marketing campaigns",
+      "Used Mailgun to send email notifications to users",
+    ],
+  },
+ 
+];
+
 const Ui = [
   {
     name: "ViableTrips Case Study",
