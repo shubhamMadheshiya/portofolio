@@ -15,33 +15,31 @@ import Contact from "./pages/Contact";
 import Github from "./pages/Github";
 import Resume from "./pages/Resume";
 import More from "./pages/More";
-import SplashScreen from './components/Splashscreen'
 
 
 function App() {
   const themeMode = useSelector(selectThemeMode);
   return (
-    <SplashScreen />
-    // <ThemeProvider theme={() => theme(themeMode)}>
-    //   <CssBaseline />
-    //   <BrowserRouter>
-    //     <Routes>
-    //       <Route path="/" element={<Layout />}>
-    //         <Route index element={<Home />} />
-    //         <Route path="/portofolio">
-    //           <Route index element={<Portofolio />} />
-    //           <Route path="more" element={<More />} />
-    //         </Route>
-    //         <Route path="/work" element={<Work />} />
-    //         <Route path="/contact" element={<Contact />} />
-    //         <Route path="/github" element={<Github />} />
-    //         <Route path="/resume" element={<Resume />} />
+    <ThemeProvider theme={() => theme(themeMode)}>
+      <CssBaseline />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="/portofolio">
+              <Route index element={<Portofolio />} />
+              <Route path="more" element={<More />} />
+            </Route>
+            <Route path="/work" element={<Work />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/github" element={<Github />} />
+            <Route path="/resume" element={<Resume />} />
 
-    //         <Route path="*" element={<NoPage />} />
-    //       </Route>
-    //     </Routes>
-    //   </BrowserRouter>
-    // </ThemeProvider>
+            <Route path="*" element={<NoPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
