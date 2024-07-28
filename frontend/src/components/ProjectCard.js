@@ -6,19 +6,30 @@ import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
-import { Avatar, Box,  Stack, Tooltip } from "@mui/material";
+import { Avatar, Box, Stack, Tooltip, Skeleton } from "@mui/material";
 import { GitHub } from "@mui/icons-material";
 
-const ProjectCard = ({card,buttonText}) => {
+const ProjectCard = ({ card, buttonText }) => {
+  const [imageLoaded, setImageLoaded] = React.useState(false);
+
   return (
     <Card sx={{ borderRadius: 4 }}>
+      {!imageLoaded && (
+        <Skeleton
+          variant="rectangular"
+          width="100%"
+          height={240}
+          sx={{ borderRadius: 4 }}
+        />
+      )}
       <CardMedia
         component={Link}
         to="/portofolio/more"
-        sx={{ height: 240 }}
+        sx={{ height: 240, display: imageLoaded ? "block" : "none" }}
         image={card.thumbnail}
         title={card.name}
         state={card}
+        onLoad={() => setImageLoaded(true)}
       />
       <CardContent>
         <Typography gutterBottom variant="h2" component="div">
@@ -33,14 +44,12 @@ const ProjectCard = ({card,buttonText}) => {
           spacing={1}
           rowGap={1}
           sx={{ borderRadius: 4, marginTop: 4 }}
-          
         >
-          {card.skills.slice(0,8).map((skill, index) => (
+          {card.skills.slice(0, 8).map((skill, index) => (
             <Box
               key={index}
               sx={{
                 p: 1, // Add some padding for better appearance
-
                 px: 1,
                 pr: 2,
                 border: "1px dashed grey",
@@ -66,7 +75,7 @@ const ProjectCard = ({card,buttonText}) => {
               rel="noopener noreferrer"
               to={card.liveLink}
             >
-             { buttonText? buttonText : 'View Live'}
+              {buttonText ? buttonText : "View Live"}
             </Button>
             <Button
               size="small"
@@ -77,24 +86,22 @@ const ProjectCard = ({card,buttonText}) => {
               Learn More
             </Button>
           </Stack>
-         
-            <Tooltip title="View source code">
-              <Avatar
-                alt=""
-                component={Link}
-                target="_blank"
-                rel="noopener noreferrer"
-                sx={{
-                  width: 24,
-                  height: 24,
-                  backgroundColor: "primary.contrastText",
-                }}
-                to={card.github}
-              >
-                <GitHub color="primary.contrastText" />
-              </Avatar>
-            </Tooltip>
-      
+          <Tooltip title="View source code">
+            <Avatar
+              alt=""
+              component={Link}
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                width: 24,
+                height: 24,
+                backgroundColor: "primary.contrastText",
+              }}
+              to={card.github}
+            >
+              <GitHub color="primary.contrastText" />
+            </Avatar>
+          </Tooltip>
         </Stack>
       </CardActions>
     </Card>
