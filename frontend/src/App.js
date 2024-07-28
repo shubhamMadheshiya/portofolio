@@ -1,4 +1,5 @@
 // App.js
+import "./App.css";
 import React, { useState, useEffect } from "react";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme/theme";
@@ -15,8 +16,8 @@ import Contact from "./pages/Contact";
 import Github from "./pages/Github";
 import Resume from "./pages/Resume";
 import More from "./pages/More";
-import SplashScreen from "./SplashScreen";
-import "./SplashScreen.css";
+import SplashScreen from './components/Splashscreen'
+
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
