@@ -1,5 +1,47 @@
 const mernStack = [
   {
+    thumbnail: "https://i.ibb.co/5RVyJ3M/Screenshot-2024-08-03-131538.png",
+    name: "JOIN",
+    shortDis:
+      "JOIN is a robust chat application offering real-time messaging with secure, end-to-end encryption. Built using React and Chakra UI, it leverages Node.js and Express for the backend, with MongoDB for data management. Advanced features include group chats, media sharing, smart typing indicators, and read receipts.",
+
+    skills: [
+      "JavaScript",
+      "React",
+      "Chakra UI",
+      "Express",
+      "Node.js",
+      "MongoDB",
+      "Socket.io",
+      "Axios",
+      "Lottie",
+      "Redux",
+      "Mongoose",
+      "JWT",
+    ],
+    liveLink: "https://join-dg43.onrender.com",
+    github: "https://github.com/shubhamMadheshiya/join-Web_App.git",
+    duration: "Jan 2022 - Mar 2022",
+    readingTime: 5,
+    listDis: [
+      "Developed a real-time messaging application with an intuitive and user-friendly interface",
+      "Implemented one-on-one and group chat functionalities to facilitate versatile communication",
+      "Used React and Chakra UI for a modern and responsive frontend design",
+      "Managed state using Redux for efficient state updates and seamless user interactions",
+      "Integrated Socket.io for real-time communication and event handling",
+      "Implemented smart typing indicators and read receipts for enhanced user experience",
+      "Secured user data with end-to-end encryption and JWT token authorization",
+      "Built the backend with Node.js and Express.js to handle server-side logic",
+      "Designed the database using MongoDB and Mongoose for effective data management",
+      "Enabled media sharing for images, videos, and other files within chats",
+      "Created custom themes and notification settings for a personalized user experience",
+      "Utilized Axios for API requests to ensure smooth data fetching and interaction",
+      "Integrated Lottie for dynamic animations, enhancing visual feedback",
+      "Ensured real-time updates and responsiveness through WebSocket integration",
+      "Deployed the application to Render for accessible online use",
+    ],
+  },
+  {
     thumbnail: "https://i.ibb.co/ZcGw4Zh/Screenshot-64.png",
     name: "Tomato",
     shortDis:
