@@ -2,7 +2,7 @@ const experiences = [
   {
     title: "Backend Engineer",
     company: "AnyTru",
-    website: "https://www.anytru.com/",
+    website: "https://anytru.com/",
     logo: "https://media.licdn.com/dms/image/D560BAQEbv31OoCEnhQ/company-logo_200_200/0/1710749547319/anytruofficial_logo?e=1727913600&v=beta&t=reYCRSoXXTpZdtUXxIjSKzUG6ahGz2vNFGa8zZZnFzg",
     date: "May 2024 - Present",
     location: "Delhi, India",
