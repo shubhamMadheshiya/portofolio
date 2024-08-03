@@ -1,6 +1,7 @@
 const mernStack = [
   {
-    thumbnail: "https://i.ibb.co/5RVyJ3M/Screenshot-2024-08-03-131538.png",
+    thumbnail:
+      "https://raw.githubusercontent.com/shubhamMadheshiya/Assets/main/Screenshot%202024-08-03%20131538.png",
     name: "JOIN",
     shortDis:
       "JOIN is a robust chat application offering real-time messaging with secure, end-to-end encryption. Built using React and Chakra UI, it leverages Node.js and Express for the backend, with MongoDB for data management. Advanced features include group chats, media sharing, smart typing indicators, and read receipts.",
@@ -42,7 +43,8 @@ const mernStack = [
     ],
   },
   {
-    thumbnail: "https://i.ibb.co/ZcGw4Zh/Screenshot-64.png",
+    thumbnail:
+      "https://raw.githubusercontent.com/shubhamMadheshiya/Assets/main/Screenshot%20(64).png",
     name: "Tomato",
     shortDis:
       "Tomato is a food ordering app with a user-friendly interface. Built with React and Material-UI, it uses Redux Toolkit for state management and RTK Query for API calls. Secure authentication and persistent login ensure user data protection and convenience.",
@@ -83,7 +85,8 @@ const mernStack = [
     ],
   },
   {
-    thumbnail: "https://i.ibb.co/vZ2Kmzg/30-06-2024-13-30-02-REC.png",
+    thumbnail:
+      "https://raw.githubusercontent.com/shubhamMadheshiya/Assets/main/Screenshot%202024-08-03%20164805.png",
     name: "Tomato Admin",
     shortDis:
       "Tomato Admin Panel manages product inventory with CRUD operations, real-time updates via WebSocket, categorized variants, secure Stripe transactions, and email notifications via Mailgun, ensuring efficient product lifecycle management.",
@@ -123,7 +126,8 @@ const mernStack = [
     ],
   },
   {
-    thumbnail: "https://i.ibb.co/WWsPgbm/Screenshot-63.png",
+    thumbnail:
+      "https://raw.githubusercontent.com/shubhamMadheshiya/Assets/main/Screenshot%20(63).png",
     name: "Weather App",
     shortDis:
       "Weather application built with React and Material-UI for a responsive UI. Real-time weather data fetched via API, managed using React hooks for state, and Axios for seamless API integration, ensuring up-to-date and interactive user experience.",
@@ -141,7 +145,8 @@ const mernStack = [
     ],
   },
   {
-    thumbnail: "https://i.ibb.co/X3DNLZ8/30-06-2024-07-37-26-REC.png",
+    thumbnail:
+      "https://raw.githubusercontent.com/shubhamMadheshiya/Assets/main/Screenshot%202024-08-03%20165353.png",
     name: "ToDo App",
     shortDis:
       "ToDo application built with React and Material-UI for a user-friendly interface. Utilizes local storage for data persistence and React hooks for efficient management of tasks, offering seamless CRUD operations for task management.",
@@ -161,7 +166,8 @@ const mernStack = [
 
 const backend = [
   {
-    thumbnail: "https://i.ibb.co/41QR1wY/Screenshot-2024-07-28-153741.png",
+    thumbnail:
+      "https://raw.githubusercontent.com/shubhamMadheshiya/Assets/main/Screenshot%202024-07-28%20153741.png",
     name: "Nactor",
     shortDis:
       "Nactor is a RESTful API project built using Node.js, Express, and Mongoose. It provides a comprehensive backend solution for managing user authentication, tours, reviews, and bookings, incorporating robust security measures and scalable design. The project includes features like user sign-up, login, password management, tour creation and management, review submission and moderation, and booking management. Additionally, it integrates with third-party services for email notifications and payment processing.",
