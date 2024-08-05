@@ -4,7 +4,7 @@ const mernStack = [
       "https://raw.githubusercontent.com/shubhamMadheshiya/Assets/main/Screenshot%202024-08-03%20131538.png",
     name: "JOIN",
     shortDis:
-      "JOIN is a robust chat application offering real-time messaging with end-to-end encryption. Built using React and Chakra UI, it leverages Node.js and Express for the backend, with MongoDB for data management. Features include group chats, media sharing, typing indicators, and read receipts.",
+      "JOIN is a robust chat application offering real-time messaging with secure, end-to-end encryption. Built using React and Chakra UI, it leverages Node.js and Express for the backend, with MongoDB for data management. Advanced features include group chats, media sharing, smart typing indicators, and read receipts.",
 
     skills: [
       "JavaScript",
