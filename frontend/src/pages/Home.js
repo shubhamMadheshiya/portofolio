@@ -218,7 +218,7 @@ const Home = () => {
                   width: 68,
                   height: 60,
                   // border: "1px solid gray",
-                  borderColor: "white",
+                  bgcolor: "white",
                 }}
                 variant="rounded"
                 src={certificate.logo}
