@@ -217,8 +217,8 @@ const Home = () => {
                 sx={{
                   width: 68,
                   height: 60,
-                  border: "1px solid gray",
-                  borderColor: "text.seconary",
+                  // border: "1px solid gray",
+                  borderColor: "white",
                 }}
                 variant="rounded"
                 src={certificate.logo}
