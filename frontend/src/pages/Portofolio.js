@@ -10,7 +10,7 @@ const Portofolio = () => {
   return (
     <Stack>
       <Typography sx={{ mt: 4, mb: 4 }} variant="h1">
-        Mern Stack
+        Full Stack
       </Typography>
 
       <Grid container spacing={4}>
