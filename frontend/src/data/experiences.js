@@ -3,7 +3,7 @@ const experiences = [
     title: "Backend Engineer",
     company: "AnyTru",
     website: "https://anytru.ai",
-    logo: "https://media.licdn.com/dms/image/D560BAQEbv31OoCEnhQ/company-logo_200_200/0/1710749547319/anytruofficial_logo?e=1727913600&v=beta&t=reYCRSoXXTpZdtUXxIjSKzUG6ahGz2vNFGa8zZZnFzg",
+    logo: "https://pbs.twimg.com/profile_images/1776307536788152320/yEAZeJDp_200x200.jpg",
     date: "May 2024 - Present",
     location: "Delhi, India",
     jobType: "Remote",
