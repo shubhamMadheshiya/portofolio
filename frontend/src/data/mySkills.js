@@ -31,6 +31,14 @@ import jenkins from "../assets/icons/skills/jenkins.svg"; // Jenkins added
 import vagrant from "../assets/icons/skills/vagrant.svg"; // Vagrant added
 import linux from "../assets/icons/skills/linux.svg"; // Linux Server added
 
+
+import eslint from "../assets/icons/skills/eslint.svg";
+import prettier from "../assets/icons/skills/prettier.svg";
+import prometheus from "../assets/icons/skills/prometheus.svg";
+import mailchimp from "../assets/icons/skills/mailchimp.svg";
+import passport from "../assets/icons/skills/passport.svg";
+import swagger from "../assets/icons/skills/swagger.svg";
+
 const skills = [
   { name: "Express", img: express, link: "https://expressjs.com/" },
   { name: "Firebase", img: firebase, link: "https://firebase.google.com/docs" },
@@ -111,7 +119,25 @@ const skills = [
   { name: "Next.js", img: nextjs, link: "https://nextjs.org/docs" }, // Next.js added
   { name: "Jenkins", img: jenkins, link: "https://www.jenkins.io/doc/" }, // Jenkins added
   { name: "Vagrant", img: vagrant, link: "https://www.vagrantup.com/docs" }, // Vagrant added
-  { name: "Linux Server", img: linux, link: "https://www.linux.org/" }, // Linux Server added
+  { name: "Linux Server", img: linux, link: "https://www.linux.org/" },
+  {
+    name: "ESLint",
+    img: eslint,
+    link: "https://eslint.org/docs/user-guide/getting-started",
+  },
+  {
+    name: "Prettier",
+    img: prettier,
+    link: "https://prettier.io/docs/en/index.html",
+  },
+  {
+    name: "Prometheus",
+    img: prometheus,
+    link: "https://prometheus.io/docs/introduction/overview/",
+  },
+  { name: "Mailchimp", img: mailchimp, link: "https://mailchimp.com/help/" },
+  { name: "Passport", img: passport, link: "http://www.passportjs.org/docs/" },
+  { name: "Swagger", img: swagger, link: "https://swagger.io/docs/" },
 ];
 
 export default skills;
