@@ -164,6 +164,161 @@ const mernStack = [
   },
 ];
 
+const androidDevelopment = [
+  {
+    thumbnail:
+      "https://raw.githubusercontent.com/shubhamMadheshiya/Assets/main/Screenshot%202024-08-03%20131538.png",
+    name: "JOIN",
+    shortDis:
+      "JOIN is a robust chat application offering real-time messaging with secure, end-to-end encryption. Built using React and Chakra UI, it leverages Node.js and Express for the backend, with MongoDB for data management. Advanced features include group chats, media sharing, smart typing indicators, and read receipts.",
+
+    skills: [
+      "JavaScript",
+      "React",
+      "Chakra UI",
+      "Express",
+      "Node.js",
+      "MongoDB",
+      "Socket.io",
+      "Axios",
+      "Lottie",
+      "Redux",
+      "Mongoose",
+      "JWT",
+    ],
+    liveLink: "https://join-dg43.onrender.com",
+    github: "https://github.com/shubhamMadheshiya/join-Web_App.git",
+    duration: "Jan 2022 - Mar 2022",
+    readingTime: 5,
+    listDis: [
+      "Developed a real-time messaging application with an intuitive and user-friendly interface",
+      "Implemented one-on-one and group chat functionalities to facilitate versatile communication",
+      "Used React and Chakra UI for a modern and responsive frontend design",
+      "Managed state using Redux for efficient state updates and seamless user interactions",
+      "Integrated Socket.io for real-time communication and event handling",
+      "Implemented smart typing indicators and read receipts for enhanced user experience",
+      "Secured user data with end-to-end encryption and JWT token authorization",
+      "Built the backend with Node.js and Express.js to handle server-side logic",
+      "Designed the database using MongoDB and Mongoose for effective data management",
+      "Enabled media sharing for images, videos, and other files within chats",
+      "Created custom themes and notification settings for a personalized user experience",
+      "Utilized Axios for API requests to ensure smooth data fetching and interaction",
+      "Integrated Lottie for dynamic animations, enhancing visual feedback",
+      "Ensured real-time updates and responsiveness through WebSocket integration",
+      "Deployed the application to Render for accessible online use",
+    ],
+  },
+  {
+    thumbnail:
+      "https://github.com/shubhamMadheshiya/Assets/blob/main/Purple%20App%20Phone%20Mockup%20Sales%20Marketing%20Presentation.png",
+    name: "Planato",
+    shortDis:
+      "Tomato is a food ordering app with a user-friendly interface. Built with React and Material-UI, it uses Redux Toolkit for state management and RTK Query for API calls. Secure authentication and persistent login ensure user data protection and convenience.",
+
+    skills: ["Kotlin", "Firebase", "Java", "Recycler View", "Android Studio"],
+    liveLink:
+      "https://drive.google.com/file/d/1GqbVkqQLchFrOOuvbVpo6X9h_YFAs7S4/view?usp=drive_link",
+    github: "https://github.com/shubhamMadheshiya/Planato-android-app.git",
+    duration: "May 2022 - Jun 2022",
+    readingTime: 4,
+    listDis: [
+      "Implemented a friendly UI to enhance user interaction and provide a seamless user experience",
+      "Used React to build the frontend, ensuring a dynamic and responsive application",
+      "Utilized Material-UI (MUI) for UI design, enabling a modern and visually appealing interface",
+      "Employed Redux Toolkit for state management, ensuring efficient and predictable state updates",
+      "Integrated RTK Query for API calls, maintaining caching and reducing redundant data fetching",
+      "Secured authentication mechanisms to protect user data and ensure safe access to the application",
+      "Implemented persistent login features to provide users with a convenient and continuous experience across sessions",
+      "Designed the backend using Node.js and Express.js to handle server-side logic",
+      "Developed the database using MongoDB and Mongoose for efficient data storage and retrieval",
+      "Implemented JWT token authorization for secure user authentication",
+      "Implemented real-time updates through WebSocket for a responsive user experience",
+      "Implemented refresh tokens to ensure persistent login sessions",
+      "Integrated Stripe for secure payment processing",
+      "Automated export of user credentials to Mailchimp for email marketing campaigns",
+      "Used Mailgun to send email notifications to users",
+    ],
+  },
+  {
+    thumbnail:
+      "https://raw.githubusercontent.com/shubhamMadheshiya/Assets/main/Screenshot%202024-08-03%20164805.png",
+    name: "Tomato Admin",
+    shortDis:
+      "Tomato Admin Panel manages product inventory with CRUD operations, real-time updates via WebSocket, categorized variants, secure Stripe transactions, and email notifications via Mailgun, ensuring efficient product lifecycle management.",
+    skills: [
+      "Java Script",
+      "React",
+      "MUI",
+      "Express",
+      "Node.Js",
+      "MongoDb",
+      "Redux",
+      "Mongoose",
+      "MailChimp",
+      "MailGun",
+      "Vite",
+    ],
+    duration: "May 2022 - Jun 2022",
+    liveLink: "https://tommmato-admin.onrender.com",
+    github: "https://github.com/shubhamMadheshiya/food-del.git",
+    readingTime: 2,
+    listDis: [
+      "Crafted an intuitive user interface for efficiently managing product inventory and operations",
+      "Engineered using React to ensure responsiveness and optimal performance of the admin dashboard",
+      "Designed with Material-UI (MUI) to create a visually appealing and user-friendly dashboard layout",
+      "Implemented Redux Toolkit for streamlined state management, ensuring efficient data flow and updates",
+      "Integrated WebSocket technology for real-time updates on product statuses, providing instant feedback to users",
+      "Enabled CRUD (Create, Read, Update, Delete) operations for seamless management of product records",
+      "Organized products based on variants to facilitate easy categorization and navigation",
+      "Developed backend functionality using Node.js and Express.js to handle business logic and API endpoints",
+      "Utilized MongoDB and Mongoose for robust and efficient storage and retrieval of product data",
+      "Implemented comprehensive transaction monitoring and logging for tracking product-related activities",
+      "Ensured secure authentication and authorization mechanisms to safeguard admin access",
+      "Utilized WebSocket for immediate notifications of product status changes, enhancing operational efficiency",
+      "Enabled comprehensive monitoring of transactions and sales through an intuitive admin dashboard",
+      "Integrated Stripe for secure handling of transactions and payments",
+      "Utilized Mailgun for efficient delivery of transactional emails and notifications to users",
+    ],
+  },
+  {
+    thumbnail:
+      "https://raw.githubusercontent.com/shubhamMadheshiya/Assets/main/Screenshot%20(63).png",
+    name: "Weather App",
+    shortDis:
+      "Weather application built with React and Material-UI for a responsive UI. Real-time weather data fetched via API, managed using React hooks for state, and Axios for seamless API integration, ensuring up-to-date and interactive user experience.",
+    skills: ["Java Script", "React", "Material UI", "JSX", "CSS", "Axios"],
+    liveLink: "https://myapp-tw9f.onrender.com/",
+    duration: "May 2022 - Jun 2022",
+    github: "https://github.com/shubhamMadheshiya/weather_app.git",
+    readingTime: 1,
+    listDis: [
+      "Built a frontend weather application using React for dynamic user interaction",
+      "Designed a responsive UI using Material-UI (MUI) for a modern look and feel",
+      "Integrated real-time API data fetching for up-to-date weather information",
+      "Utilized React hooks for efficient state management and component logic",
+      "Implemented Axios for seamless API calls and data fetching",
+    ],
+  },
+  {
+    thumbnail:
+      "https://raw.githubusercontent.com/shubhamMadheshiya/Assets/main/Screenshot%202024-08-03%20165353.png",
+    name: "ToDo App",
+    shortDis:
+      "ToDo application built with React and Material-UI for a user-friendly interface. Utilizes local storage for data persistence and React hooks for efficient management of tasks, offering seamless CRUD operations for task management.",
+    skills: ["Java Script", "React", "Material UI", "JSX", "CSS"],
+    liveLink: "https://todo-app-vsvl.onrender.com/",
+    duration: "May 2022 - Jun 2022",
+    github: "https://github.com/shubhamMadheshiya/Todo-App.git",
+    readingTime: 1,
+    listDis: [
+      "Developed a ToDo application frontend using React for interactive user interfaces",
+      "Designed a clean and intuitive UI with Material-UI (MUI) components",
+      "Implemented local storage for persistent data storage and retrieval",
+      "Utilized React hooks extensively for efficient CRUD operations",
+    ],
+  },
+];
+
 const backend = [
   {
     thumbnail:
@@ -241,4 +396,4 @@ const graphic = [
   },
 ];
 
-export { mernStack, Ui, graphic, backend };
+export { mernStack, Ui, graphic, backend, androidDevelopment };
