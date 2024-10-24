@@ -26,14 +26,6 @@ const competencies = [
     percent: 92,
   },
   {
-    skill: "Kotlin",
-    percent: 67,
-  },
-  {
-    skill: "Kubernetes",
-    percent: 60,
-  },
-  {
     skill: "Mui",
     percent: 99,
   },
@@ -41,17 +33,46 @@ const competencies = [
     skill: "MongoDb",
     percent: 95,
   },
+
+  {
+    skill: "Redux",
+    percent: 90,
+  },
+  {
+    skill: "Kotlin",
+    percent: 67,
+  },
+  {
+    skill: "Vagrant",
+    percent: 92,
+  },
+  {
+    skill: "Jenkins",
+    percent: 68,
+  },
+  {
+    skill: "Kubernetes",
+    percent: 60,
+  },
   {
     skill: "Docker",
     percent: 90,
+  },
+  {
+    skill: "Linux",
+    percent: 86,
   },
   {
     skill: "AWS",
     percent: 85,
   },
   {
-    skill: "Redux",
-    percent: 90,
+    skill: "Ansible",
+    percent: 78,
+  },
+  {
+    skill: "Terraform",
+    percent: 79,
   },
 ];
 
