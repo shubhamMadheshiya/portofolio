@@ -10,9 +10,11 @@ import kotlin from "../assets/icons/skills/kotlin.svg";
 import kubernetes from "../assets/icons/skills/kubernetes.svg";
 import materialUi from "../assets/icons/skills/material-ui.svg";
 import mongodb from "../assets/icons/skills/mongodb.svg";
+import mongoose from "../assets/icons/skills/mongoose.svg"; // Mongoose added
 import nodejs from "../assets/icons/skills/nodejs.svg";
 import react from "../assets/icons/skills/react.svg";
 import redux from "../assets/icons/skills/redux.svg";
+import rtkQuery from "../assets/icons/skills/rtk.svg"; // RTK Query added
 import sass from "../assets/icons/skills/sass.svg";
 import typescript from "../assets/icons/skills/typescript.svg";
 import xml from "../assets/icons/skills/xml.svg";
@@ -23,6 +25,11 @@ import ansible from "../assets/icons/skills/ansible.svg";
 import aws from "../assets/icons/skills/aws.svg";
 import css from "../assets/icons/skills/css.svg";
 import docker from "../assets/icons/skills/docker.svg";
+import terraform from "../assets/icons/skills/terraform.svg"; // Terraform added
+import nextjs from "../assets/icons/skills/nextjs.svg"; // Next.js added
+import jenkins from "../assets/icons/skills/jenkins.svg"; // Jenkins added
+import vagrant from "../assets/icons/skills/vagrant.svg"; // Vagrant added
+import linux from "../assets/icons/skills/linux.svg"; // Linux Server added
 
 const skills = [
   { name: "Express", img: express, link: "https://expressjs.com/" },
@@ -53,6 +60,7 @@ const skills = [
     link: "https://mui.com/getting-started/installation/",
   },
   { name: "MongoDB", img: mongodb, link: "https://docs.mongodb.com/" },
+  { name: "Mongoose", img: mongoose, link: "https://mongoosejs.com/docs/" }, // Mongoose added
   { name: "Node.js", img: nodejs, link: "https://nodejs.org/en/docs/" },
   {
     name: "React",
@@ -64,6 +72,11 @@ const skills = [
     img: redux,
     link: "https://redux.js.org/introduction/getting-started",
   },
+  {
+    name: "RTK Query",
+    img: rtkQuery,
+    link: "https://redux-toolkit.js.org/rtk-query/overview",
+  }, // RTK Query added
   { name: "Sass", img: sass, link: "https://sass-lang.com/documentation" },
   {
     name: "TypeScript",
@@ -90,6 +103,15 @@ const skills = [
     link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
   },
   { name: "Docker", img: docker, link: "https://docs.docker.com/" },
+  {
+    name: "Terraform",
+    img: terraform,
+    link: "https://www.terraform.io/docs/index.html",
+  }, // Terraform added
+  { name: "Next.js", img: nextjs, link: "https://nextjs.org/docs" }, // Next.js added
+  { name: "Jenkins", img: jenkins, link: "https://www.jenkins.io/doc/" }, // Jenkins added
+  { name: "Vagrant", img: vagrant, link: "https://www.vagrantup.com/docs" }, // Vagrant added
+  { name: "Linux Server", img: linux, link: "https://www.linux.org/" }, // Linux Server added
 ];
 
 export default skills;
