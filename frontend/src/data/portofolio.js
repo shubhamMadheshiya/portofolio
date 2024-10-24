@@ -198,7 +198,8 @@ const androidDevelopment = [
     thumbnail:
       "https://raw.githubusercontent.com/shubhamMadheshiya/Assets/refs/heads/main/Purple%20App%20Phone%20Mockup%20Sales%20Marketing%20Presentation.png",
     name: "Planato",
-    shortDis: "",
+    shortDis:
+      "A futuristic Android app created for fun, allowing users to select a planet and book a ride to it. Designed to enhance UI/UX for Android applications, implementing responsive layouts, Recycler View, and interactive user feedback through toast messages.",
 
     skills: ["Kotlin", "Firebase", "Java", "Recycler View", "Android Studio"],
     liveLink:
@@ -207,7 +208,12 @@ const androidDevelopment = [
     duration: "Jan 2022 - Jan 2022",
     readingTime: 4,
     listDis: [
-     
+      "Developed a fun and engaging UI, allowing users to book rides to different planets with a smooth and intuitive interface.",
+      "Optimized the UI for responsiveness across various Android devices, ensuring a consistent user experience.",
+      "Implemented Recycler View for efficient display of planet options, enhancing user interaction and app performance.",
+      "Added toast messages for instant feedback, improving user engagement and interaction with the app.",
+      "Focused on UI/UX improvements to deliver a visually appealing and user-friendly Android application.",
+      "Used Kotlin and Java for development, with Firebase for backend services and data handling.",
     ],
   },
   {
