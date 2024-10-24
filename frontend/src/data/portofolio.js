@@ -246,7 +246,7 @@ const backend = [
       "ESLint",
       "Prettier",
     ],
-    liveLink: "https://documenter.getpostman.com/view/24788238/2sA3kaBeLr",
+    liveLink: "https://documenter.getpostman.com/view/24788238/2sAY4rG5cq",
     github: "https://github.com/shubhamMadheshiya/Nactor.git",
     duration: "Jun 2024 - July 2024",
     readingTime: 4,
