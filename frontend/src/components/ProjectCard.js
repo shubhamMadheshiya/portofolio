@@ -11,7 +11,7 @@ import { GitHub } from "@mui/icons-material";
 
 const ProjectCard = ({card,buttonText}) => {
   return (
-    <Card sx={{ borderRadius: 4, height: 300, overflow: "hidden" }}>
+    <Card sx={{ borderRadius: 4, overflow: "hidden" }}>
       <CardMedia
         component={Link}
         to="/portofolio/more"

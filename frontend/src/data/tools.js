@@ -4,20 +4,10 @@ import adobePhotoshop from "../assets/icons/tools/adobe-photoshop.svg";
 import adobePremiere from "../assets/icons/tools/adobe-premiere.svg";
 import adobeXd from "../assets/icons/tools/adobe-xd.svg";
 import androidStudio from "../assets/icons/tools/android-studio.svg";
-import babel from "../assets/icons/tools/babel.svg";
-import chai from "../assets/icons/tools/chai.svg";
-
 import figma from "../assets/icons/tools/figma.svg";
-
-
-import mocha from "../assets/icons/tools/mocha.svg";
-
 import postman from "../assets/icons/tools/postman.svg";
-
 import sketch from "../assets/icons/tools/sketch.svg";
-
 import vscode from "../assets/icons/tools/vs-code.svg";
-import webpack from "../assets/icons/tools/webpack.svg";
 
 const tools = [
   {
