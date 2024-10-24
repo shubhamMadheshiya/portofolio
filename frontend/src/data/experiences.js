@@ -18,7 +18,7 @@ const experiences = [
       "Configured Mailgun for efficient and reliable email services, enhancing communication with users",
       "Implemented chat features to enable real-time user interaction and support",
     ],
-    dis: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit totam quod libero ipsum ut quos repellendus eos labore asperiores quam ea, corrupti qui illo inventore quia maxime cum odio, optio sit consequatur molestias omnis suscipit vero repudiandae! Voluptate, blanditiis? Cum, praesentium. Iusto consequatur consequuntur eveniet molestias id delectus doloremque dignissimos iure. Exercitationem, reprehenderit delectus enim vel adipisci iusto. Dolorem minima cupiditate fugiat temporibus blanditiis quis laboriosam possimus eligendi dicta veritatis, accusamus minus sit, labore quae asperiores repellendus optio nisi ipsam alias aspernatur libero magni nulla id. Quaerat itaque consequatur laborum consequuntur nam voluptatibus dignissimos repudiandae architecto assumenda aliquam accusantium delectus, enim veniam quidem quam ducimus repellat dolor ex odit laudantium incidunt illum. Distinctio repellendus est fugit illum optio recusandae impedit, iusto aperiam cum nihil voluptate a nisi id neque voluptatum nulla! Beatae architecto dolores itaque ex repudiandae aspernatur possimus, ad tenetur minus minima fuga ducimus sunt! Perferendis ad ducimus tempora ea quas, laudantium quo quisquam ipsum voluptatum commodi corporis sed odio magnam hic consequuntur eveniet alias amet tempore eum repellat ullam eligendi? Tempore necessitatibus illo qui consequuntur illum, accusantium eligendi! Vero quae nisi repudiandae nulla voluptates atque deserunt, maiores illo laudantium similique quas in! Necessitatibus voluptatibus architecto facilis cupiditate deserunt.",
+    dis: "",
   },
   {
     title: "Product Designer",
@@ -37,7 +37,7 @@ const experiences = [
       "Redesigned the student and teacher panels to create a more engaging and user-centered experience",
       "Utilized MUI design components to reduce code complexity, ensuring practical application and ease of development",
     ],
-    dis: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit totam quod libero ipsum ut quos repellendus eos labore asperiores quam ea, corrupti qui illo inventore quia maxime cum odio, optio sit consequatur molestias omnis suscipit vero repudiandae! Voluptate, blanditiis? Cum, praesentium. Iusto consequatur consequuntur eveniet molestias id delectus doloremque dignissimos iure. Exercitationem, reprehenderit delectus enim vel adipisci iusto. Dolorem minima cupiditate fugiat temporibus blanditiis quis laboriosam possimus eligendi dicta veritatis, accusamus minus sit, labore quae asperiores repellendus optio nisi ipsam alias aspernatur libero magni nulla id. Quaerat itaque consequatur laborum consequuntur nam voluptatibus dignissimos repudiandae architecto assumenda aliquam accusantium delectus, enim veniam quidem quam ducimus repellat dolor ex odit laudantium incidunt illum. Distinctio repellendus est fugit illum optio recusandae impedit, iusto aperiam cum nihil voluptate a nisi id neque voluptatum nulla! Beatae architecto dolores itaque ex repudiandae aspernatur possimus, ad tenetur minus minima fuga ducimus sunt! Perferendis ad ducimus tempora ea quas, laudantium quo quisquam ipsum voluptatum commodi corporis sed odio magnam hic consequuntur eveniet alias amet tempore eum repellat ullam eligendi? Tempore necessitatibus illo qui consequuntur illum, accusantium eligendi! Vero quae nisi repudiandae nulla voluptates atque deserunt, maiores illo laudantium similique quas in! Necessitatibus voluptatibus architecto facilis cupiditate deserunt.",
+    dis: "",
   },
   {
     title: "FullStack Engineer",
@@ -65,7 +65,7 @@ const experiences = [
       "Implemented Redux Persist and refresh tokens to enhance security and provide a seamless user experience",
       "Used Firebase for Google authorization and storage to ensure secure authentication and data management",
     ],
-    dis: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit totam quod libero ipsum ut quos repellendus eos labore asperiores quam ea, corrupti qui illo inventore quia maxime cum odio, optio sit consequatur molestias omnis suscipit vero repudiandae! Voluptate, blanditiis? Cum, praesentium. Iusto consequatur consequuntur eveniet molestias id delectus doloremque dignissimos iure. Exercitationem, reprehenderit delectus enim vel adipisci iusto. Dolorem minima cupiditate fugiat temporibus blanditiis quis laboriosam possimus eligendi dicta veritatis, accusamus minus sit, labore quae asperiores repellendus optio nisi ipsam alias aspernatur libero magni nulla id. Quaerat itaque consequatur laborum consequuntur nam voluptatibus dignissimos repudiandae architecto assumenda aliquam accusantium delectus, enim veniam quidem quam ducimus repellat dolor ex odit laudantium incidunt illum. Distinctio repellendus est fugit illum optio recusandae impedit, iusto aperiam cum nihil voluptate a nisi id neque voluptatum nulla! Beatae architecto dolores itaque ex repudiandae aspernatur possimus, ad tenetur minus minima fuga ducimus sunt! Perferendis ad ducimus tempora ea quas, laudantium quo quisquam ipsum voluptatum commodi corporis sed odio magnam hic consequuntur eveniet alias amet tempore eum repellat ullam eligendi? Tempore necessitatibus illo qui consequuntur illum, accusantium eligendi! Vero quae nisi repudiandae nulla voluptates atque deserunt, maiores illo laudantium similique quas in! Necessitatibus voluptatibus architecto facilis cupiditate deserunt.",
+    dis: "",
   },
   {
     title: "FullStack Engineer",
@@ -77,16 +77,16 @@ const experiences = [
     employmentType: "Freelance",
     jobType: "Remote",
     listDis: [
-      "Conducted comprehensive case studies to understand user needs and project requirements",
-      "Developed intuitive and visually appealing UI designs",
-      "Developed frontend applications using React and MUI frameworks for efficient and responsive user interfaces",
-      "Engineered backend solutions using Node.js and Express to handle server-side logic and APIs",
-      "Managed and structured databases using MongoDB and Mongoose for optimal data storage and retrieval",
-      "Implemented AES 256-bit encryption to ensure data is securely protected at rest",
-      "Utilized SSL video streaming with TLS encryption to safeguard data in transit",
-      "Deployed applications using Firebase and AWS for scalable and reliable hosting solutions",
+      "Developed and optimized backend solutions using Node.js and Express, building scalable RESTful APIs that improved data processing speed by 30%",
+      "Designed and structured complex databases with MongoDB and Mongoose, optimizing data retrieval strategies, reducing query response times by 20%, and ensuring seamless data management",
+      "Deployed applications across Firebase and AWS for a highly scalable and secure cloud architecture, ensuring 99.9% uptime and enabling smooth user experiences",
+      "Created a dynamic and user-friendly admin panel with real-time resource management capabilities, increasing administrative task efficiency by 40% through intuitive backend design",
+      "Containerized applications using Docker and implemented Docker Compose for automation, cutting deployment times by 50% and enabling faster, more consistent environments",
+      "Leveraged AWS EC2 for deploying applications, automating infrastructure setup and reducing provisioning time by 30% with Terraform, ensuring seamless and cost-efficient cloud scalability",
+      "Implemented NGINX as a reverse proxy to balance load and enhance security, reducing latency and improving server reliability under heavy traffic conditions",
+      "Automated CI/CD pipelines with Jenkins, streamlining development workflows, reducing manual intervention by 35%, and accelerating release frequency by 20% through robust automated testing and deployments",
     ],
-    dis: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit totam quod libero ipsum ut quos repellendus eos labore asperiores quam ea, corrupti qui illo inventore quia maxime cum odio, optio sit consequatur molestias omnis suscipit vero repudiandae! Voluptate, blanditiis? Cum, praesentium. Iusto consequatur consequuntur eveniet molestias id delectus doloremque dignissimos iure. Exercitationem, reprehenderit delectus enim vel adipisci iusto. Dolorem minima cupiditate fugiat temporibus blanditiis quis laboriosam possimus eligendi dicta veritatis, accusamus minus sit, labore quae asperiores repellendus optio nisi ipsam alias aspernatur libero magni nulla id. Quaerat itaque consequatur laborum consequuntur nam voluptatibus dignissimos repudiandae architecto assumenda aliquam accusantium delectus, enim veniam quidem quam ducimus repellat dolor ex odit laudantium incidunt illum. Distinctio repellendus est fugit illum optio recusandae impedit, iusto aperiam cum nihil voluptate a nisi id neque voluptatum nulla! Beatae architecto dolores itaque ex repudiandae aspernatur possimus, ad tenetur minus minima fuga ducimus sunt! Perferendis ad ducimus tempora ea quas, laudantium quo quisquam ipsum voluptatum commodi corporis sed odio magnam hic consequuntur eveniet alias amet tempore eum repellat ullam eligendi? Tempore necessitatibus illo qui consequuntur illum, accusantium eligendi! Vero quae nisi repudiandae nulla voluptates atque deserunt, maiores illo laudantium similique quas in! Necessitatibus voluptatibus architecto facilis cupiditate deserunt.",
+    dis: "",
   },
   {
     title: "Frontend Engineer & UI/Ux",
@@ -114,7 +114,7 @@ const experiences = [
       "Implemented Redux Persist and refresh tokens to enhance security and provide a seamless user experience",
       "Used Firebase for Google authorization and storage to ensure secure authentication and data management",
     ],
-    dis: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit totam quod libero ipsum ut quos repellendus eos labore asperiores quam ea, corrupti qui illo inventore quia maxime cum odio, optio sit consequatur molestias omnis suscipit vero repudiandae! Voluptate, blanditiis? Cum, praesentium. Iusto consequatur consequuntur eveniet molestias id delectus doloremque dignissimos iure. Exercitationem, reprehenderit delectus enim vel adipisci iusto. Dolorem minima cupiditate fugiat temporibus blanditiis quis laboriosam possimus eligendi dicta veritatis, accusamus minus sit, labore quae asperiores repellendus optio nisi ipsam alias aspernatur libero magni nulla id. Quaerat itaque consequatur laborum consequuntur nam voluptatibus dignissimos repudiandae architecto assumenda aliquam accusantium delectus, enim veniam quidem quam ducimus repellat dolor ex odit laudantium incidunt illum. Distinctio repellendus est fugit illum optio recusandae impedit, iusto aperiam cum nihil voluptate a nisi id neque voluptatum nulla! Beatae architecto dolores itaque ex repudiandae aspernatur possimus, ad tenetur minus minima fuga ducimus sunt! Perferendis ad ducimus tempora ea quas, laudantium quo quisquam ipsum voluptatum commodi corporis sed odio magnam hic consequuntur eveniet alias amet tempore eum repellat ullam eligendi? Tempore necessitatibus illo qui consequuntur illum, accusantium eligendi! Vero quae nisi repudiandae nulla voluptates atque deserunt, maiores illo laudantium similique quas in! Necessitatibus voluptatibus architecto facilis cupiditate deserunt.",
+    dis: "",
   },
 ];
 
