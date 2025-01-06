@@ -127,7 +127,7 @@ const mernStack = [
   },
   {
     thumbnail:
-      "https://github.com/shubhamMadheshiya/Assets/blob/main/Screenshot%202025-01-06%20133037.png",
+      "https://raw.githubusercontent.com/shubhamMadheshiya/Assets/refs/heads/main/Screenshot%202025-01-06%20133037.png",
     name: "Code Intencity",
     shortDis:
       "Tomato Admin Panel manages product inventory with CRUD operations, real-time updates via WebSocket, categorized variants, secure Stripe transactions, and email notifications via Mailgun, ensuring efficient product lifecycle management.",
@@ -143,7 +143,7 @@ const mernStack = [
       "MailChimp",
       "MailGun",
       "Vite",
-      "Tainwind"
+      "Tainwind",
     ],
     duration: "May 2023 - Jun 2023",
     liveLink: "https://codesintensity.vercel.app/",
