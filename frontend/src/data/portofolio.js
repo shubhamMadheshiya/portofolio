@@ -127,6 +127,48 @@ const mernStack = [
   },
   {
     thumbnail:
+      "https://github.com/shubhamMadheshiya/Assets/blob/main/Screenshot%202025-01-06%20133037.png",
+    name: "Code Intencity",
+    shortDis:
+      "Tomato Admin Panel manages product inventory with CRUD operations, real-time updates via WebSocket, categorized variants, secure Stripe transactions, and email notifications via Mailgun, ensuring efficient product lifecycle management.",
+    skills: [
+      "Java Script",
+      "React",
+      "MUI",
+      "Express",
+      "Node.Js",
+      "MongoDb",
+      "Redux",
+      "Mongoose",
+      "MailChimp",
+      "MailGun",
+      "Vite",
+      "Tainwind"
+    ],
+    duration: "May 2023 - Jun 2023",
+    liveLink: "https://codesintensity.vercel.app/",
+    github: "https://github.com/shubhamMadheshiya/food-del.git",
+    readingTime: 2,
+    listDis: [
+      "Crafted an intuitive user interface for efficiently managing product inventory and operations",
+      "Engineered using React to ensure responsiveness and optimal performance of the admin dashboard",
+      "Designed with Material-UI (MUI) to create a visually appealing and user-friendly dashboard layout",
+      "Implemented Redux Toolkit for streamlined state management, ensuring efficient data flow and updates",
+      "Integrated WebSocket technology for real-time updates on product statuses, providing instant feedback to users",
+      "Enabled CRUD (Create, Read, Update, Delete) operations for seamless management of product records",
+      "Organized products based on variants to facilitate easy categorization and navigation",
+      "Developed backend functionality using Node.js and Express.js to handle business logic and API endpoints",
+      "Utilized MongoDB and Mongoose for robust and efficient storage and retrieval of product data",
+      "Implemented comprehensive transaction monitoring and logging for tracking product-related activities",
+      "Ensured secure authentication and authorization mechanisms to safeguard admin access",
+      "Utilized WebSocket for immediate notifications of product status changes, enhancing operational efficiency",
+      "Enabled comprehensive monitoring of transactions and sales through an intuitive admin dashboard",
+      "Integrated Stripe for secure handling of transactions and payments",
+      "Utilized Mailgun for efficient delivery of transactional emails and notifications to users",
+    ],
+  },
+  {
+    thumbnail:
       "https://raw.githubusercontent.com/shubhamMadheshiya/Assets/main/Screenshot%20(63).png",
     name: "Weather App",
     shortDis:
