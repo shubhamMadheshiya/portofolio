@@ -1,26 +1,36 @@
-// src/Resume.js
 import React from "react";
-import { Worker, Viewer } from "@react-pdf-viewer/core";
-import { defaultLayoutPlugin } from "@react-pdf-viewer/default-layout";
-import "@react-pdf-viewer/core/lib/styles/index.css";
-import "@react-pdf-viewer/default-layout/lib/styles/index.css";
-import file from "../assets/pdf/resume.pdf";
+import { Button } from "@mui/material";
+import { Download } from "@mui/icons-material";
 
 const Resume = () => {
-  const defaultLayoutPluginInstance = defaultLayoutPlugin();
+  // Direct Google Drive download link
+  const driveDownloadUrl =
+    "https://drive.google.com/uc?export=download&id=1UZLl8-u5mdVEmdjzaVY34j8it0clqQ0Q";
+
   return (
-    <Worker
-      workerUrl={`https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js`}
-    >
-      
-      <div
-        style={{
-          height: "750px",
-        }}
+    <div style={{ textAlign: "center" }}>
+      {/* Preview PDF in iframe */}
+      <iframe
+        src="https://drive.google.com/file/d/1UZLl8-u5mdVEmdjzaVY34j8it0clqQ0Q/preview"
+        style={{ width: "100%", height: "100vh", border: "none" }}
+        allow="autoplay"
+        title="resume"
+      />
+
+      {/* Download button */}
+      <Button
+        component="a"
+        href={driveDownloadUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        variant="contained"
+        color="primary"
+        endIcon={<Download />}
+        sx={{ mt: 2 }}
       >
-        <Viewer fileUrl={file} plugins={[defaultLayoutPluginInstance]} />
-      </div>
-    </Worker>
+        Download Resume
+      </Button>
+    </div>
   );
 };
 

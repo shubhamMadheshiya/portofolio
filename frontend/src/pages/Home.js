@@ -11,88 +11,13 @@ import ExpertiseCard from "../components/ExpertiseCard";
 import { Assignment } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 import { ReactTyped } from "react-typed";
+import Linkdin from "../components/Linkdin";
 import myData from "../data/myData";
 const Home = () => {
- 
   return (
     <Stack>
-      <Paper
-        sx={{
-          borderRadius: 4,
-          p: 2,
-          //  display: { xs: "none", sm: "block" }
-        }}
-      >
-        <Box
-          sx={{
-            position: "relative",
-            backgroundImage: `url(${background})`,
-            backgroundSize: "cover",
-            minHeight: { xs: "200px", md: "280px" },
-            zIndex: 0,
-            borderRadius: 4,
-          }}
-        >
-          <Box
-            sx={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              backgroundColor: "rgba(0, 0, 0, 0.5)", // Translucent overlay
-              zIndex: 1,
-              borderRadius: 4,
-            }}
-          />
-          <Stack
-            justifyContent="center"
-            alignItems="center"
-            sx={{
-              position: "relative",
-              zIndex: 2,
-              minHeight: { xs: "200px", md: "280px" },
-              px: 2,
-            }}
-          >
-            <Typography
-              alignItems="center"
-              textAlign="center"
-              variant="h1"
-              sx={{ mb: 4, color: "white" }}
-            >
-              Hello, Check This Out!
-            </Typography>
-            <Stack
-              direction="row"
-              spacing={1}
-              alignItems="center"
-              justifyContent="center"
-            >
-              {/* <Typography variant="h3" color="primary">
-                {"</div>"}
-              </Typography> */}
-              <Typography
-                variant="h3"
-                color="primary.main"
-                fontWeight={600}
-                fontFamily="Anonymous Pro"
-              >
-                <ReactTyped
-                  strings={myData.iAm}
-                  typeSpeed={40}
-                  backSpeed={50}
-                  loop
-                  // style={{ color: theme.palette.primary.main }}
-                />
-              </Typography>
-              {/* <Typography variant="h3" color="primary">
-                {"</div>"}
-              </Typography> */}
-            </Stack>
-          </Stack>
-        </Box>
-      </Paper>
+      
+      <Linkdin />
       <Typography variant="h1" sx={{ mt: 8, mb: 4 }}>
         My Expertise
       </Typography>
@@ -112,6 +37,7 @@ const Home = () => {
         direction="row"
         flexWrap="wrap"
         spacing={2}
+        gap={2}
         rowGap={2}
         sx={{ borderRadius: 4 }}
       >
@@ -126,6 +52,8 @@ const Home = () => {
               textDecoration: "none",
               // maxWidth:'',
               gap: 1,
+              margin: 0,
+              marginLeft: "0 !important",
               display: "flex",
               justifyContent: "space-between",
               flexDirection: "row",
@@ -159,6 +87,7 @@ const Home = () => {
         flexWrap="wrap"
         spacing={2}
         rowGap={2}
+        gap={2}
         sx={{ borderRadius: 4 }}
       >
         {tools.map((tool, index) => (
@@ -174,6 +103,8 @@ const Home = () => {
               gap: 1,
               display: "flex",
               justifyContent: "space-between",
+              margin: 0,
+              marginLeft: "0 !important",
               flexDirection: "row",
               alignItems: "center", // Ensure items are vertically centered
               p: 1, // Add some padding for better appearance

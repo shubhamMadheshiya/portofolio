@@ -11,12 +11,14 @@ import React from "react";
 import CircularWithValueLabel from "./circularProgress";
 import LinearWithValueLabel from "./LinearProgress";
 import { Download, GitHub, LinkedIn, Mail } from "@mui/icons-material";
-import ResumePdf from "../assets/pdf/resume.pdf";
+// import resumePdf from "../assets/pdf/resume.pdf";
 import myData from "../data/myData.js";
 import competencies from "../data/competencies.js";
 
 const LeftDrawer = () => {
-  
+  const resumePdf =
+    "https://drive.google.com/uc?export=download&id=1UZLl8-u5mdVEmdjzaVY34j8it0clqQ0Q";
+
   return (
     <Stack
       p={2}
@@ -193,7 +195,7 @@ const LeftDrawer = () => {
       <Button
         download
         component="a"
-        href={ResumePdf}
+        href={resumePdf}
         variant="contained"
         endIcon={<Download />}
       >
