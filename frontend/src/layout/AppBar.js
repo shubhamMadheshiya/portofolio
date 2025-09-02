@@ -41,6 +41,7 @@ import {
 import { Link, Outlet } from "react-router-dom";
 import Footer from "./Footer";
 import myData from "../data/myData";
+import NavHeader from "./NavHeader";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -88,7 +89,6 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     borderRadius: 20 / 2,
   },
 }));
-
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
@@ -187,9 +187,9 @@ export default function MiniDrawer() {
     dispatch(toggleTheme());
   };
 
-  const handleRightMiniDrawerOpen=()=>{
+  const handleRightMiniDrawerOpen = () => {
     setOpenRightMini(!openRightMini);
-  }
+  };
 
   const handleDrawerOpen = () => setOpen(true);
   const handleDrawerClose = () => setOpen(false);
@@ -197,7 +197,7 @@ export default function MiniDrawer() {
   const handleClose = () => setAnchorEl(null);
 
   const handleClick = (arg) => {
-     setOpenRightMini(!openRightMini);
+    setOpenRightMini(!openRightMini);
     setIsClicked(arg);
   };
 
@@ -247,10 +247,14 @@ export default function MiniDrawer() {
         }}
       >
         <Toolbar>
-        <Stack direction='row' spacing={2} alignItems='center'>
-          <Avatar sx={{height:28, width:28}} src={myData.profilePic} alt={myData.name}/>
-          <Typography variant="h3">{myData.name}</Typography>
-        </Stack>
+          <Stack direction="row" spacing={2} alignItems="center">
+            <Avatar
+              sx={{ height: 28, width: 28 }}
+              src={myData.profilePic}
+              alt={myData.name}
+            />
+            <Typography variant="h3">{myData.name}</Typography>
+          </Stack>
           {/* <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -313,8 +317,12 @@ export default function MiniDrawer() {
           <LeftDrawer />
         </Drawer>
       </Box>
-
-      <MainContent />
+      <Box sx={{width:'100%'}}>
+        <NavHeader />
+        <MainContent />
+      </Box>
+      
+      
       <RightDrawer
         sx={{ display: "none" }}
         theme={theme}
@@ -470,6 +478,7 @@ function MainContent() {
       }}
     >
       <DrawerHeader sx={{ display: { xs: "block", sm: "none" } }} />
+
       <Outlet />
       <Footer />
     </Stack>

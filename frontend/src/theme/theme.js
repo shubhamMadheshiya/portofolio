@@ -4,19 +4,24 @@ const theme = (mode) =>
   createTheme({
     typography: {
       h1: {
-        fontSize: "1.8rem", // Adjusted for better readability
+        fontSize: "1.4rem", // Adjusted for better readability
         fontWeight: 800,
       },
       h2: {
-        fontSize: "1.4rem",
+        fontSize: "1rem",
         fontWeight: 400,
       },
       h3: {
-        fontSize: "0.875rem", // Adjusted for better readability
+        fontSize: "0.8rem", // Adjusted for better readability
         fontWeight: 400,
       },
       h4: {
-        fontSize: "0.75rem", // Adjusted for better readability
+        fontSize: "0.7rem", // Adjusted for better readability
+        // fontWeight: 100, // Adjusted for better readability
+        // color: "#919EAB",
+      },
+      h5: {
+        fontSize: "0.6rem", // Adjusted for better readability
         // fontWeight: 100, // Adjusted for better readability
         // color: "#919EAB",
       },

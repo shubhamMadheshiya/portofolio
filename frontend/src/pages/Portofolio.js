@@ -1,14 +1,19 @@
 import React from "react";
 import ProjectCard from "../components/ProjectCard";
-import { Divider , Grid, Stack, Typography } from "@mui/material";
-import { graphic, mernStack, Ui,backend, androidDevelopment } from "../data/portofolio";
+import { Divider, Grid, Stack, Typography } from "@mui/material";
+import {
+  graphic,
+  mernStack,
+  Ui,
+  backend,
+  androidDevelopment,
+} from "../data/portofolio";
 import UiCard from "../components/UiCard";
 import Graphic from "../components/Graphic";
 
-
 const Portofolio = () => {
   return (
-    <Stack>
+    <Stack sx={{ width: "100%" }}>
       <Typography sx={{ mt: 4, mb: 4 }} variant="h1">
         Full Stack
       </Typography>
@@ -20,7 +25,7 @@ const Portofolio = () => {
           </Grid>
         ))}
       </Grid>
-      <Divider  sx={{mt:8}} />
+      <Divider sx={{ mt: 8 }} />
       <Typography sx={{ mt: 4, mb: 4 }} variant="h1">
         Android Development
       </Typography>
@@ -32,7 +37,7 @@ const Portofolio = () => {
           </Grid>
         ))}
       </Grid>
-      <Divider  sx={{mt:8}} />
+      <Divider sx={{ mt: 8 }} />
       <Typography sx={{ mt: 4, mb: 4 }} variant="h1">
         Backend
       </Typography>
@@ -44,7 +49,7 @@ const Portofolio = () => {
           </Grid>
         ))}
       </Grid>
-      <Divider sx={{mt:8}} />
+      <Divider sx={{ mt: 8 }} />
       <Typography sx={{ mt: 4, mb: 4 }} variant="h1">
         UI/ UX
       </Typography>
@@ -55,7 +60,7 @@ const Portofolio = () => {
           </Grid>
         ))}
       </Grid>
-      <Divider  sx={{mt:8}} />
+      <Divider sx={{ mt: 8 }} />
       <Typography sx={{ mt: 4, mb: 4 }} variant="h1">
         Graphic Design
       </Typography>

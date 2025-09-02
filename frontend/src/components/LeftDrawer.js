@@ -25,21 +25,26 @@ const LeftDrawer = () => {
       mb={5}
       spacing={2}
       sx={{
+
         overflowY: "auto",
         maxHeight: "100vh", // Adjust as needed
         "&::-webkit-scrollbar": {
-          width: "8px",
+          width: "2px",
         },
         "&::-webkit-scrollbar-track": {
-          background: "#1f2937", // Dark blue background color
+          background: "gray", // Dark blue background color
         },
         "&::-webkit-scrollbar-thumb": {
           backgroundColor: "#3C454A", // Dark blue thumb color
           borderRadius: "4px",
+          width:'4px',
+          // m:-4
+          
         },
         "&::-webkit-scrollbar-thumb:hover": {
           background: "#555",
         },
+        // width:"292px"
       }}
     >
       <Paper sx={{ borderRadius: 2 }}>
