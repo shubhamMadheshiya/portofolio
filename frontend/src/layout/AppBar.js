@@ -20,6 +20,8 @@ import {
   Switch,
   Typography,
   Avatar,
+  Paper,
+  Button,
 } from "@mui/material";
 import MuiDrawer from "@mui/material/Drawer";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -31,6 +33,7 @@ import { toggleTheme, selectThemeMode } from "../theme/themeSlice";
 import {
   Article,
   Close,
+  Delete,
   GitHub,
   Home,
   KeyboardArrowRight,
@@ -42,6 +45,7 @@ import { Link, Outlet } from "react-router-dom";
 import Footer from "./Footer";
 import myData from "../data/myData";
 import NavHeader from "./NavHeader";
+import AnimatedBottomNav from "./AnimatedBottomNav.js";
 
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -223,7 +227,7 @@ export default function MiniDrawer() {
       link: "/contact",
     },
     {
-      name: "Open Source",
+      name: "GitHub",
       icon: <GitHub />,
       link: "/github",
     },
@@ -235,8 +239,10 @@ export default function MiniDrawer() {
   ]);
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex", position: "relative" }}>
       <CssBaseline />
+
+      {/* top app bar */}
       <AppBar
         position="fixed"
         open={open}
@@ -245,40 +251,8 @@ export default function MiniDrawer() {
           width: { sm: `calc(100% - ${leftDrawerWidth}px)` },
           ml: { sm: `${leftDrawerWidth}px` },
         }}
-      >
-        <Toolbar>
-          <Stack direction="row" spacing={2} alignItems="center">
-            <Avatar
-              sx={{ height: 28, width: 28 }}
-              src={myData.profilePic}
-              alt={myData.name}
-            />
-            <Typography variant="h3">{myData.name}</Typography>
-          </Stack>
-          {/* <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleLeftDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
-          >
-            <MenuIcon />
-          </IconButton> */}
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleRightMiniDrawerOpen}
-            edge="start"
-            sx={{
-              marginLeft: "auto",
-              ...(open && { display: "none" }),
-            }}
-          >
-            {openRightMini ? <KeyboardArrowRight /> : <MenuOpen />}
-          </IconButton>
-        </Toolbar>
-      </AppBar>
-
+      ><NavHeader /></AppBar>
+      {/* drawer logic */}
       <Box
         component="nav"
         sx={{ width: { sm: leftDrawerWidth }, flexShrink: { sm: 0 } }}
@@ -317,12 +291,13 @@ export default function MiniDrawer() {
           <LeftDrawer />
         </Drawer>
       </Box>
-      <Box sx={{width:'100%'}}>
-        <NavHeader />
+
+      <Box sx={{ width: "100%" }}>
+        <NavHeader sx={{display:{sm:''}}}/>
+        
         <MainContent />
       </Box>
-      
-      
+
       <RightDrawer
         sx={{ display: "none" }}
         theme={theme}
@@ -340,6 +315,41 @@ export default function MiniDrawer() {
         handleDrawerOpen={handleDrawerOpen}
         openRightMini={openRightMini}
       />
+      <Paper
+        sx={{
+          display: {
+            sm: "flex",
+            sx: "flex",
+            lg: "none",
+          },
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          // bgcolor: "red",
+          color: "white",
+          height: "60px",
+          bottom: 0,
+          left: 0,
+          right: 0,
+          gap: 4,
+          position: "absolute",
+        }}
+      >
+        <AnimatedBottomNav ListData={ListData} />
+        {/* {ListData.map((item, index) => {
+          return (
+            <IconButton
+              aria-label="delete"
+              size="small"
+              component={Link}
+              to={item.link}
+            >
+              {item.icon}
+            </IconButton>
+            
+          );
+        })} */}
+      </Paper>
     </Box>
   );
 }
@@ -477,7 +487,7 @@ function MainContent() {
         },
       }}
     >
-      <DrawerHeader sx={{ display: { xs: "block", sm: "none" } }} />
+      {/* <DrawerHeader sx={{ display: { xs: "block", sm: "none" } }} /> */}
 
       <Outlet />
       <Footer />

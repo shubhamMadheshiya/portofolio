@@ -1,9 +1,8 @@
 import { Avatar, Paper, Stack, Typography } from "@mui/material";
 import React from "react";
 import ExperieneCard from "../components/ExperieneCard";
-import experiences from '../data/experiences'
+import experiences from "../data/experiences";
 const Work = () => {
- 
   return (
     <Stack spacing={4}>
       <Typography sx={{ mt: 4, mb: 4 }} variant="h1">

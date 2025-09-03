@@ -43,12 +43,18 @@ const ProjectCard = ({ card, buttonText }) => {
         <Stack
           direction="row"
           flexWrap="wrap"
-          spacing={1}
+          // spacing={1}
+          gap={1}
           rowGap={1}
           sx={{ borderRadius: 4, py: 2 }}
         >
           {card.skills.slice(0, 8).map((skill, index) => (
-            <Chip label={skill} />
+            <Chip label={skill}   sx={{
+              fontSize: '0.75rem', // Adjust this value as needed
+              height: '24px',       // Optional: reduce chip height
+              padding: '0 0px',
+              ml: 0     // Optional: adjust horizontal padding
+            }} />
             // <Box
             //   key={index}
             //   sx={{

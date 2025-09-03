@@ -17,7 +17,7 @@ import SchoolIcon from "@mui/icons-material/School";
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LanguageIcon from "@mui/icons-material/Language";
-
+import myData from "../data/myData";
 // Define a simple profile data structure
 const initialProfile = {
   name: "Jane Doe",
@@ -98,7 +98,7 @@ const App = () => {
             {/* Background image section */}
             <Box
               sx={{
-                bgcolor: "#4a4a4a",
+                backgroundImage:`url(${myData.profilePic})`,
                 height: 120,
                 borderTopLeftRadius: "inherit",
                 borderTopRightRadius: "inherit",
@@ -117,13 +117,13 @@ const App = () => {
                 alignItems: "flex-start",
                 textAlign: "center",
                 position: "relative",
-                zIndex: 1,
+                zIndex: 0,
               }}
             >
               {/* Profile Avatar */}
               <Avatar
                 alt={profile.name}
-                src="https://placehold.co/150x150/5DADE2/FFFFFF?text=JD"
+                src={myData.profilePic}
                 sx={{
                   width: 150,
                   height: 150,
@@ -135,14 +135,14 @@ const App = () => {
 
               {/* Name and Title */}
               <Typography
-                variant="h4"
-                component="h1"
+                variant="h2"
+                // component="h1"
                 sx={{ fontWeight: "bold" }}
               >
-                {profile.name}
+                {myData.name}
               </Typography>
-              <Typography variant="h6" color="text.secondary" sx={{ mb: 1 }}>
-                {profile.title}
+              <Typography variant="h4" color="text.secondary" textAlign={'left'} sx={{ mb: 1 }}>
+                {myData.bio}
               </Typography>
               <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
                 {profile.location}

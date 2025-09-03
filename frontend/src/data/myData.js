@@ -1,5 +1,6 @@
 import { LinkedIn } from "@mui/icons-material";
-import myPic from '../assets/mypic.jpg'
+// import myPic from '../assets/mypicc.jpg'
+import myPic from '../assets/background.png'
 
 const myData = {
   name: "Shubham Kumar Maddheshiya",

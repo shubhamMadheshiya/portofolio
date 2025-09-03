@@ -26,10 +26,20 @@ const Home = () => {
   return (
     <Stack gap={4}>
       <Linkdin />
-      <Typography variant="h1" sx={{ mt: 8, mb: 4 }}>
+     
+      <Paper
+        sx={{
+          p: 2,
+          display: "flex",
+          flexDirection: "column",
+          gap: 2,
+          borderRadius: 4,
+        }}
+      >
+         <Typography variant="h1">
         My Expertise
       </Typography>
-
+      <Divider/>
       <Grid container spacing={2}>
         {expertise.map((expertise, index) => (
           <Grid item xl={4} md={12} sm={12} key={index}>
@@ -37,6 +47,7 @@ const Home = () => {
           </Grid>
         ))}
       </Grid>
+      </Paper>
       <Paper
         sx={{
           p: 2,

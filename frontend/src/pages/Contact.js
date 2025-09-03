@@ -92,7 +92,7 @@ const Contact = () => {
 
   return (
     <Stack>
-      <Typography sx={{ mt: 4, mb: 4 }} variant="h1">
+      <Typography sx={{ mt: 0, mb: 4 }} variant="h1">
         Contact Information
       </Typography>
       <Grid container spacing={2}>

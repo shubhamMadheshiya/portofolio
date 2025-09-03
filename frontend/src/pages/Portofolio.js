@@ -14,7 +14,7 @@ import Graphic from "../components/Graphic";
 const Portofolio = () => {
   return (
     <Stack sx={{ width: "100%" }}>
-      <Typography sx={{ mt: 4, mb: 4 }} variant="h1">
+      <Typography sx={{ mt: 0, mb: 4 }} variant="h1">
         Full Stack
       </Typography>
 

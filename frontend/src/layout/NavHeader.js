@@ -27,6 +27,7 @@ const NavHeader = () => {
         //   backgroundColor: "rgba(255, 255, 255, 0.29)",
         //   backgroundColor: "transparent",
         // },
+        zIndex:4,
         boxShadow: 3,
       }}
     >
