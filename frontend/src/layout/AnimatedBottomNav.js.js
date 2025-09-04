@@ -16,15 +16,19 @@ const AnimatedBottomNav = React.forwardRef(({ ListData }, ref) => {
       ref={ref} // Now, the ref is correctly passed to the Paper component
       sx={{
         display: {
-          sm: "flex",
           xs: "flex",
-          lg: "none",
+          sm: "none",
+          // lg: "none",
         },
         // ... rest of your styles
       }}
       elevation={4}
     >
-      <BottomNavigation value={value} onChange={handleChange} sx={{width:'100%',}}>
+      <BottomNavigation
+        value={value}
+        onChange={handleChange}
+        sx={{ width: "100%" }}
+      >
         {ListData.map((item, index) => (
           <BottomNavigationAction
             key={index}

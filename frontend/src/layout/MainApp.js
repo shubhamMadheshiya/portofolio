@@ -246,9 +246,9 @@ export default function MainApp() {
             sx={[
               {
                 marginRight: 5,
-                display: { xs: "none", sm:'none' },
+                display: { xs: "none", sm: open ?'none' :'block' },
               },
-              open && { display: "none" },
+              // open && { display: "none" },
             ]}
           >
             <MenuIcon />
@@ -262,7 +262,7 @@ export default function MainApp() {
       <Drawer
         variant="permanent"
         open={open}
-        sx={{ display: { xs: "none", sm: "none" } }}
+        sx={{ display: { xs: "none", sm: "block" } }}
       >
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
