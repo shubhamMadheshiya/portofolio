@@ -19,66 +19,67 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LanguageIcon from "@mui/icons-material/Language";
 import myData from "../data/myData";
 // Define a simple profile data structure
-const initialProfile = {
-  name: "Jane Doe",
-  title: "Senior Product Manager",
-  location: "San Francisco Bay Area",
-  isPublic: true,
-  jobTitles: ["Product Manager", "Program Manager"],
-  locations: ["San Francisco, CA", "New York, NY", "Remote"],
-  startImmediately: true,
-  about:
-    "A seasoned Product Manager with 8+ years of experience in SaaS and e-commerce. Passionate about building intuitive products that solve real-world problems. Proven track record of leading cross-functional teams from ideation to launch.",
-  skills: [
-    "Product Management",
-    "Agile Methodologies",
-    "User Experience (UX)",
-    "Market Research",
-    "Data Analysis",
-    "Roadmapping",
-    "SQL",
-    "JavaScript",
-    "JIRA",
-    "Figma",
-  ],
-  experience: [
-    {
-      company: "Innovate Solutions",
-      title: "Senior Product Manager",
-      duration: "Jan 2022 - Present",
-      description:
-        "Led product strategy and execution for a B2B SaaS platform, resulting in a 25% increase in user engagement.",
-    },
-    {
-      company: "Global Tech",
-      title: "Product Manager",
-      duration: "Jun 2018 - Dec 2021",
-      description:
-        "Managed the product lifecycle for a mobile e-commerce application, growing the user base by 500%.",
-    },
-  ],
-  education: [
-    {
-      university: "Stanford University",
-      degree: "M.S., Computer Science",
-      duration: "2016 - 2018",
-    },
-    {
-      university: "University of California, Berkeley",
-      degree: "B.A., Business Administration",
-      duration: "2012 - 2016",
-    },
-  ],
-  socialLinks: {
-    linkedin: "https://www.linkedin.com/in/janedoe",
-    github: "https://github.com/janedoe",
-    website: "https://janedoe.com",
-    email: "mailto:jane.doe@example.com",
-  },
-};
+// const initialProfile = {
+//   name: "Jane Doe",
+//   title: "Senior Product Manager",
+//   location: "San Francisco Bay Area",
+//   isPublic: true,
+//   jobTitles: ["Product Manager", "Program Manager"],
+//   locations: ["San Francisco, CA", "New York, NY", "Remote"],
+//   startImmediately: true,
+//   about:
+//     "A seasoned Product Manager with 8+ years of experience in SaaS and e-commerce. Passionate about building intuitive products that solve real-world problems. Proven track record of leading cross-functional teams from ideation to launch.",
+//   skills: [
+//     "Product Management",
+//     "Agile Methodologies",
+//     "User Experience (UX)",
+//     "Market Research",
+//     "Data Analysis",
+//     "Roadmapping",
+//     "SQL",
+//     "JavaScript",
+//     "JIRA",
+//     "Figma",
+//   ],
+//   experience: [
+//     {
+//       company: "Innovate Solutions",
+//       title: "Senior Product Manager",
+//       duration: "Jan 2022 - Present",
+//       description:
+//         "Led product strategy and execution for a B2B SaaS platform, resulting in a 25% increase in user engagement.",
+//     },
+//     {
+//       company: "Global Tech",
+//       title: "Product Manager",
+//       duration: "Jun 2018 - Dec 2021",
+//       description:
+//         "Managed the product lifecycle for a mobile e-commerce application, growing the user base by 500%.",
+//     },
+//   ],
+//   education: [
+//     {
+//       university: "Stanford University",
+//       degree: "M.S., Computer Science",
+//       duration: "2016 - 2018",
+//     },
+//     {
+//       university: "University of California, Berkeley",
+//       degree: "B.A., Business Administration",
+//       duration: "2012 - 2016",
+//     },
+//   ],
+//   socialLinks: {
+//     linkedin: "https://www.linkedin.com/in/janedoe",
+//     github: "https://github.com/janedoe",
+//     website: "https://janedoe.com",
+//     email: "mailto:jane.doe@example.com",
+//   },
+// };
 
 const App = () => {
-  const [profile, setProfile] = useState(initialProfile);
+  const [profile, setProfile] = useState({...myData});
+  console.log(profile)
 
   return (
     <Box
@@ -98,7 +99,7 @@ const App = () => {
             {/* Background image section */}
             <Box
               sx={{
-                backgroundImage:`url(${myData.profilePic})`,
+                backgroundImage:`url(${profile.profilePic})`,
                 height: 120,
                 borderTopLeftRadius: "inherit",
                 borderTopRightRadius: "inherit",
@@ -123,7 +124,7 @@ const App = () => {
               {/* Profile Avatar */}
               <Avatar
                 alt={profile.name}
-                src={myData.profilePic}
+                src={profile.profilePic}
                 sx={{
                   width: 150,
                   height: 150,
@@ -139,13 +140,13 @@ const App = () => {
                 // component="h1"
                 sx={{ fontWeight: "bold" }}
               >
-                {myData.name}
+                {profile.name}
               </Typography>
               <Typography variant="h4" color="text.secondary" textAlign={'left'} sx={{ mb: 1 }}>
-                {myData.bio}
+                {profile.bio}
               </Typography>
               <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
-                {profile.location}
+                {profile.city}
               </Typography>
 
               {/* Open to Work Badge */}
@@ -182,7 +183,8 @@ const App = () => {
                   </Typography>
                   <Stack
                     direction="row"
-                    spacing={1}
+                    // spacing={1}
+                    gap={1}
                     sx={{ mt: 1 }}
                     flexWrap="wrap"
                   >
@@ -203,11 +205,11 @@ const App = () => {
                   </Typography>
                   <Stack
                     direction="row"
-                    spacing={1}
+                    gap={1}
                     sx={{ mt: 1 }}
                     flexWrap="wrap"
                   >
-                    {profile.locations.map((loc, index) => (
+                    {profile.preferdLocations.map((loc, index) => (
                       <Chip
                         key={index}
                         label={loc}
@@ -243,7 +245,7 @@ const App = () => {
               <Grid container spacing={2}>
                 <Grid item>
                   <Link
-                    href={profile.socialLinks.linkedin}
+                    href={profile.linkedIn}
                     target="_blank"
                     rel="noopener"
                     color="inherit"
@@ -258,7 +260,7 @@ const App = () => {
                 </Grid>
                 <Grid item>
                   <Link
-                    href={profile.socialLinks.github}
+                    href={profile.gitHub}
                     target="_blank"
                     rel="noopener"
                     color="inherit"
@@ -271,24 +273,10 @@ const App = () => {
                     />
                   </Link>
                 </Grid>
+              
                 <Grid item>
                   <Link
-                    href={profile.socialLinks.website}
-                    target="_blank"
-                    rel="noopener"
-                    color="inherit"
-                    underline="none"
-                  >
-                    <Chip
-                      icon={<LanguageIcon />}
-                      label="Website"
-                      sx={{ borderRadius: 2 }}
-                    />
-                  </Link>
-                </Grid>
-                <Grid item>
-                  <Link
-                    href={profile.socialLinks.email}
+                    href={profile.email}
                     color="inherit"
                     underline="none"
                   >
@@ -313,7 +301,7 @@ const App = () => {
                   About
                 </Typography>
                 <Typography variant="body1" color="text.secondary">
-                  {profile.about}
+                  {profile.aboutMe}
                 </Typography>
               </CardContent>
             </Card>
@@ -326,7 +314,7 @@ const App = () => {
                   Skills
                 </Typography>
                 <Stack direction="row" spacing={1} flexWrap="wrap" useFlexGap>
-                  {profile.skills.map((skill, index) => (
+                  {profile.primarySkills.map((skill, index) => (
                     <Chip
                       key={index}
                       label={skill}
@@ -345,7 +333,7 @@ const App = () => {
                   <WorkIcon sx={{ verticalAlign: "middle", mr: 1 }} />
                   Experience
                 </Typography>
-                <Stack divider={<Divider flexItem />} spacing={2}>
+                {/* <Stack divider={<Divider flexItem />} spacing={2}>
                   {profile.experience.map((exp, index) => (
                     <Box key={index} sx={{ py: 1 }}>
                       <Typography variant="h6" sx={{ fontWeight: "medium" }}>
@@ -359,7 +347,7 @@ const App = () => {
                       </Typography>
                     </Box>
                   ))}
-                </Stack>
+                </Stack> */}
               </CardContent>
             </Card>
           </Grid>
@@ -372,13 +360,13 @@ const App = () => {
                   Education
                 </Typography>
                 <Stack divider={<Divider flexItem />} spacing={2}>
-                  {profile.education.map((edu, index) => (
+                  {profile.educations.map((edu, index) => (
                     <Box key={index} sx={{ py: 1 }}>
                       <Typography variant="h6" sx={{ fontWeight: "medium" }}>
-                        {edu.university}
+                        {edu.nameOfOrg}
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
-                        {edu.degree} • {edu.duration}
+                        {edu.degree} • {edu.startDate + ' - '+edu.endDate}
                       </Typography>
                     </Box>
                   ))}

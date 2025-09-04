@@ -1,21 +1,25 @@
 import { LinkedIn } from "@mui/icons-material";
-// import myPic from '../assets/mypicc.jpg'
-import myPic from '../assets/background.png'
+import myPic from '../assets/mypic.jpg'
+// import myPic from '../assets/background.png'
 
 const myData = {
   name: "Shubham Kumar Maddheshiya",
   email: "kr.shubhamgupta1999@gmail.com",
   profilePic: myPic,
+  startImmediately: true,
   gitHub: "https://github.com/shubhamMadheshiya",
   linkedIn: "https://www.linkedin.com/in/shubham-maddheshiya07",
   behance: "https://www.behance.net/shubhamgupta67",
   dribbble: "https://dribbble.com/shubham_01_",
   phone: "9670653925",
   bio: "MERN / Full-Stack Developer | Graphic Designer | DevOps | UI/UX",
+  aboutMe:"A senior software developer with 4+ years of experience in Full-Stack and DevOps. Passionate about building intuitive products that solve real-world problems. Proven track record of leading cross-functional teams from ideation to launch.",
   residence: "India",
   city: "Hyderabad",
   age: 26,
   company: "AFS Business Solutions Pvt Ltd",
+  startDate:'Immediately',
+  jobTitles:["Full-Stack Developer", "Front-End Developer","Backend-Developer","DevOps Engineer"],
   languages: [
     {
       name: "Hindi",
@@ -32,6 +36,28 @@ const myData = {
     "I am Graphic Designer",
     "I am a DevOps Engineer",
   ],
+  educations:[
+    {
+      nameOfOrg:'Madan Mohan Malviya University of Technology',
+      degree:'B.Tech',
+      course:'Computer Science',
+      startDate:'Aug 2019',
+      endDate:'Apr 2023',
+      grade:'8.5',
+      logo:'https://upload.wikimedia.org/wikipedia/en/a/a8/Madan_Mohan_Malaviya_University_of_Technology_logo.png'
+    },
+    {
+      nameOfOrg:'RPM Academy',
+      degree:'Intermediate',
+      course:'PMC',
+      startDate:'Jun 2016',
+      endDate:'Mar 2017',
+      grade:'78%',
+      logo:'https://upload.wikimedia.org/wikipedia/commons/3/3f/R.P.M_Academy.webp'
+    }
+  ],
+  preferdLocations:['Hydrabad', 'Banglore', 'Pune', 'Noida','Banglore','Pune','Mumbai'],
+  primarySkills:[ "JavaScript","TypeScript","React.js","Next.js","Redux","Node.js","Express","MongoDB","SQL","Mongoose","MUI","HTML", "CSS","Java","Kotlin","Docker","Jenkins","Terraform"]
 };
 
 export default myData;
