@@ -1,19 +1,21 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom';
-import Footer from './Footer';
-import { Stack } from '@mui/material';
+import React from "react";
+import { Outlet } from "react-router-dom";
+import Footer from "./Footer";
+import { Stack } from "@mui/material";
 
-const MainContent = () => {
+const MainContent = ({bottomNavHeight,appBarHeight}) => {
   return (
     <Stack
-    //   minHeight="100vh"
+      //   minHeight="100vh"
       component="main"
       sx={{
         flexGrow: 1,
         p: 3,
-        mt: 8,
+        pt: `${appBarHeight + 24}px`,
         overflowY: "auto",
-        minHeight: "100vh",
+        // maxHeight: `${100-bottomNavHeight-appBarHeight}vh`,
+        height:`calc(100vh - ${bottomNavHeight}px)`,
+        width:'100%',
         "&::-webkit-scrollbar": {
           width: "8px",
         },
@@ -37,4 +39,4 @@ const MainContent = () => {
   );
 };
 
-export default MainContent 
+export default MainContent;

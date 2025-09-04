@@ -18,8 +18,14 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
-import { Article, GitHub, Home, Work, WorkspacePremium } from "@mui/icons-material";
-import { Switch, Tooltip } from "@mui/material";
+import {
+  Article,
+  GitHub,
+  Home,
+  Work,
+  WorkspacePremium,
+} from "@mui/icons-material";
+import { Stack, Switch, Tooltip } from "@mui/material";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleTheme, selectThemeMode } from "../theme/themeSlice";
@@ -140,14 +146,12 @@ const Drawer = styled(MuiDrawer, {
         ...openedMixin(theme),
         "& .MuiDrawer-paper": openedMixin(theme),
       },
-     
     },
     {
       props: ({ open }) => !open,
       style: {
         ...closedMixin(theme),
         "& .MuiDrawer-paper": closedMixin(theme),
-       
       },
     },
   ],
@@ -160,37 +164,41 @@ export default function MainApp() {
   const dispatch = useDispatch();
   const themeMode = useSelector(selectThemeMode);
   const [ListData, setListData] = React.useState([
-      {
-        name: "Home",
-        icon: <Home />,
-        link: "/",
-      },
-      {
-        name: "Portofolio",
-        icon: <WorkspacePremium />,
-        link: "/portofolio",
-      },
-      {
-        name: "Work",
-        icon: <Work />,
-        link: "/work",
-      },
-      {
-        name: "Contact",
-        icon: <MailIcon />,
-        link: "/contact",
-      },
-      {
-        name: "GitHub",
-        icon: <GitHub />,
-        link: "/github",
-      },
-      {
-        name: "Resume",
-        icon: <Article />,
-        link: "/resume",
-      },
-    ]);
+    {
+      name: "Home",
+      icon: <Home />,
+      link: "/",
+    },
+    {
+      name: "Portofolio",
+      icon: <WorkspacePremium />,
+      link: "/portofolio",
+    },
+    {
+      name: "Work",
+      icon: <Work />,
+      link: "/work",
+    },
+    {
+      name: "Contact",
+      icon: <MailIcon />,
+      link: "/contact",
+    },
+    {
+      name: "GitHub",
+      icon: <GitHub />,
+      link: "/github",
+    },
+    {
+      name: "Resume",
+      icon: <Article />,
+      link: "/resume",
+    },
+  ]);
+  const [appBarHeight, setAppBarHeight] = React.useState(0);
+  const [bottomNavHeight, setBottomNavHeight] = React.useState(0);
+  const bottomMenu = 8;
+  
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -203,15 +211,33 @@ export default function MainApp() {
     // setOpenRightMini(!openRightMini);
     setIsClicked(arg);
   };
-   const toggleDarkMode = () => {
-     dispatch(toggleTheme());
-   };
+  const toggleDarkMode = () => {
+    dispatch(toggleTheme());
+  };
+    // Ref to attach to the AppBar DOM element
+    const appBarRef = React.useRef(null);
+    const bottomNavRef = React.useRef(null);
+    // useLayoutEffect runs synchronously after DOM mutations
+    React.useLayoutEffect(() => {
+      if (appBarRef.current) {
+        // Get the height from the element's DOMRect and update the state
+        setAppBarHeight(appBarRef.current.getBoundingClientRect().height);
+      }
+      if (bottomNavRef.current) {
+        setBottomNavHeight(bottomNavRef.current.offsetHeight);
+      }
+    }, []);
 
   return (
-    <Box sx={{ display: "flex",minHeight:'100vh' }}>
+    <Box className='mainAppContainer' sx={{ display: "flex", flexDirection: "row" ,width:'100%'}}>
       <CssBaseline />
-      <AppBar position="fixed" open={open} sx={{display:"flex", flexDirection:"row", }}>
-        <Toolbar>
+      <AppBar
+        position="fixed"
+        open={open}
+        sx={{ display: "flex", flexDirection: "row" }}
+        // ref={appBarRef}
+      >
+        <Toolbar ref={appBarRef}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -220,8 +246,7 @@ export default function MainApp() {
             sx={[
               {
                 marginRight: 5,
-                display:{xs:'none'},
-                
+                display: { xs: "none" },
               },
               open && { display: "none" },
             ]}
@@ -307,9 +332,10 @@ export default function MainApp() {
           </ListItem>
         </List>
       </Drawer>
-
-      <MainContent  />
-      <AnimatedBottomNav ListData={ListData} />
+      <Stack direction={"column"}>
+        <MainContent bottomMenu={bottomMenu} appBarHeight={appBarHeight} bottomNavHeight={bottomNavHeight}/>
+        <AnimatedBottomNav ref={bottomNavRef} ListData={ListData} />
+      </Stack>
     </Box>
   );
 }
