@@ -12,7 +12,7 @@ const Resume = () => {
       {/* Preview PDF in iframe */}
       <iframe
         src="https://drive.google.com/file/d/1UZLl8-u5mdVEmdjzaVY34j8it0clqQ0Q/preview"
-        style={{ width: "100%", height: "100vh", border: "none" }}
+        style={{ width: "100%", height: "calc(var(--vh, 1vh) * 100", border: "none" }}
         allow="autoplay"
         title="resume"
       />

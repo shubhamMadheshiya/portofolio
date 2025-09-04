@@ -27,7 +27,7 @@ const LeftDrawer = () => {
       sx={{
 
         overflowY: "auto",
-        maxHeight: "100vh", // Adjust as needed
+        maxHeight: "calc(var(--vh, 1vh) * 100", // Adjust as needed
         "&::-webkit-scrollbar": {
           width: "2px",
         },
