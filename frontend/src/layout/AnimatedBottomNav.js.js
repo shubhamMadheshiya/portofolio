@@ -26,21 +26,23 @@ export default function AnimatedBottomNav({ ListData }) {
     <Paper
       sx={{
         display: {
-          sm: "flex",
-          sx: "flex",
+          sm: "none",
+          xs: "flex",
           lg: "none",
         },
-        display: "flex",
+       
         alignItems: "center",
         justifyContent: "center",
         // bgcolor: "red",
         color: "white",
-        height: "60px",
-        bottom: 0,
+        // height: "60px",
+        // bottom: "0 !important",
+        top:'100vh',
         left: 0,
         right: 0,
         gap: 0,
         position: "absolute",
+        zIndex: 1000,
       }}
       elevation={4}
     >
@@ -55,6 +57,7 @@ export default function AnimatedBottomNav({ ListData }) {
           icon={item.icon}
           component={Link}
           to={item.link}
+          sx={{p:2, minWidth:20}}
         />
         
         ))}
