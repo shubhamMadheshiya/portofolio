@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import Footer from "./Footer";
 import { Stack } from "@mui/material";
 
-const MainContent = ({ bottomNavHeight, appBarHeight ,viewportHeight}) => {
+const MainContent = ({ bottomNavHeight, appBarHeight }) => {
   return (
     <Stack
       //   minHeight="100vh"
@@ -14,7 +14,7 @@ const MainContent = ({ bottomNavHeight, appBarHeight ,viewportHeight}) => {
         pt: `${appBarHeight + 24}px`,
         overflowY: "auto",
         // maxHeight: `${100-bottomNavHeight-appBarHeight}vh`,
-        height: `calc(100vh - ${bottomNavHeight+viewportHeight}px)`,
+        height: `calc(var(--vh, 1vh) * 100 - ${appBarHeight + bottomMenuHeight}px)`,
 
         "&::-webkit-scrollbar": {
           width: "8px",
