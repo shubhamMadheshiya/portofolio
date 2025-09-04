@@ -348,6 +348,7 @@ export default function MainApp() {
           bottomMenu={bottomMenu}
           appBarHeight={appBarHeight}
           bottomNavHeight={bottomNavHeight}
+          viewportHeight={viewportHeight}
         />
         <AnimatedBottomNav ref={bottomNavRef} ListData={ListData} />
       </Stack>

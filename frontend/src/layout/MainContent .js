@@ -1,33 +1,29 @@
-// MainContent.js
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Footer from "./Footer";
 import { Stack } from "@mui/material";
 
-
-const MainContent = ({ appBarHeight }) => {
-  // A typical Material-UI bottom navigation bar height is around 56px
-  const bottomNavHeight = 56;
-  
+const MainContent = ({ bottomNavHeight, appBarHeight ,viewportHeight}) => {
   return (
     <Stack
+      //   minHeight="100vh"
       component="main"
       sx={{
         flexGrow: 1,
         p: 3,
-        mt: `${appBarHeight}px`,
+        pt: `${appBarHeight + 24}px`,
         overflowY: "auto",
-        // Use the CSS variable and the calculated heights
-        maxHeight: `calc(var(--vh, 1vh) * 100 - ${appBarHeight + bottomNavHeight}px)`,
-        // ... (rest of your styles)
+        // maxHeight: `${100-bottomNavHeight-appBarHeight}vh`,
+        height: `calc(100vh - ${bottomNavHeight+viewportHeight}px)`,
+
         "&::-webkit-scrollbar": {
           width: "8px",
         },
         "&::-webkit-scrollbar-track": {
-          background: "#1f2937",
+          background: "#1f2937", // Dark blue background color
         },
         "&::-webkit-scrollbar-thumb": {
-          backgroundColor: "#3C454A ",
+          backgroundColor: "#3C454A ", // Dark blue thumb color
           borderRadius: "4px",
         },
         "::-webkit-scrollbar-thumb:hover": {
@@ -35,6 +31,8 @@ const MainContent = ({ appBarHeight }) => {
         },
       }}
     >
+      {/* <DrawerHeader sx={{ display: { xs: "block", sm: "none" } }} /> */}
+
       <Outlet />
       <Footer />
     </Stack>
