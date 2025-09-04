@@ -229,7 +229,7 @@ export default function MainApp() {
     }, []);
 
   return (
-    <Box className='mainAppContainer' sx={{ display: "flex", flexDirection: "row" ,width:'100%'}}>
+    <Box className='mainAppContainer' sx={{ display: "flex", flexDirection: "row" }}>
       <CssBaseline />
       <AppBar
         position="fixed"
@@ -332,7 +332,7 @@ export default function MainApp() {
           </ListItem>
         </List>
       </Drawer>
-      <Stack direction={"column"}>
+      <Stack direction={"column"} sx={{width:'100%'}}>
         <MainContent bottomMenu={bottomMenu} appBarHeight={appBarHeight} bottomNavHeight={bottomNavHeight}/>
         <AnimatedBottomNav ref={bottomNavRef} ListData={ListData} />
       </Stack>

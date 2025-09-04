@@ -15,7 +15,7 @@ const MainContent = ({bottomNavHeight,appBarHeight}) => {
         overflowY: "auto",
         // maxHeight: `${100-bottomNavHeight-appBarHeight}vh`,
         height:`calc(100vh - ${bottomNavHeight}px)`,
-        width:'100%',
+        
         "&::-webkit-scrollbar": {
           width: "8px",
         },

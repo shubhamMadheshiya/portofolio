@@ -118,7 +118,7 @@ const GitHubStats = () => {
     });
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return <div >Error: {error.message}</div>;
   }
 
   if (loading) {
@@ -137,7 +137,7 @@ const GitHubStats = () => {
   }
 
   return (
-    <Container maxWidth="md">
+    <Container >
       <Box mt={4}>
         <Card sx={{ p: 2, borderRadius: 4 }}>
           <CardContent>
