@@ -16,7 +16,7 @@ const AnimatedBottomNav = React.forwardRef(({ ListData }, ref) => {
       ref={ref} // Now, the ref is correctly passed to the Paper component
       sx={{
         display: {
-          sm: "none",
+          sm: "flex",
           xs: "flex",
           lg: "none",
         },

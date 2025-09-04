@@ -247,7 +247,7 @@ export default function MiniDrawer() {
         position="fixed"
         open={open}
         sx={{
-          display: { xs: "block", sm: "none" },
+          display: { xs: "block", sm: "block" },
           width: { sm: `calc(100% - ${leftDrawerWidth}px)` },
           ml: { sm: `${leftDrawerWidth}px` },
         }}
@@ -268,7 +268,7 @@ export default function MiniDrawer() {
             keepMounted: true, // Better open performance on mobile.
           }}
           sx={{
-            display: { xs: "block", sm: "none" },
+            display: { xs: "block", sm: "block" },
             "& .MuiDrawer-paper": {
               boxSizing: "border-box",
               width: leftDrawerWidth,

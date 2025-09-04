@@ -246,7 +246,7 @@ export default function MainApp() {
             sx={[
               {
                 marginRight: 5,
-                display: { xs: "none" },
+                display: { xs: "none", sm:'none' },
               },
               open && { display: "none" },
             ]}
@@ -262,7 +262,7 @@ export default function MainApp() {
       <Drawer
         variant="permanent"
         open={open}
-        sx={{ display: { xs: "none", sm: "block" } }}
+        sx={{ display: { xs: "none", sm: "none" } }}
       >
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
