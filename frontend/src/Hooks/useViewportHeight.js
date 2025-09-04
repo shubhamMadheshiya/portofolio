@@ -1,3 +1,4 @@
+// src/hooks/useViewportHeight.js
 import { useState, useEffect } from 'react';
 
 export const useViewportHeight = () => {
@@ -8,12 +9,12 @@ export const useViewportHeight = () => {
       setViewportHeight(window.innerHeight);
     };
 
-    // Attach the event listener
     window.addEventListener('resize', handleResize);
+    window.addEventListener('orientationchange', handleResize);
 
-    // Clean up the event listener when the component unmounts
     return () => {
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('orientationchange', handleResize);
     };
   }, []);
 

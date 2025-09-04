@@ -15,18 +15,10 @@ import Contact from "./pages/Contact";
 import Github from "./pages/Github";
 import Resume from "./pages/Resume";
 import More from "./pages/More";
-import { useViewportHeight } from "./Hooks/useViewportHeight";
-import { useEffect } from "react";
 
 
 function App() {
-  const vh = useViewportHeight();
-
-  useEffect(() => {
-    // Set the CSS variable --vh
-    document.documentElement.style.setProperty('--vh', `${vh * 0.01}px`);
-  }, [vh]);
-
+  
   const themeMode = useSelector(selectThemeMode);
   return (
     <ThemeProvider theme={() => theme(themeMode)}>

@@ -32,6 +32,7 @@ import { toggleTheme, selectThemeMode } from "../theme/themeSlice";
 import MainContent from "./MainContent ";
 import AnimatedBottomNav from "./AnimatedBottomNav.js";
 import NavHeader from "./NavHeader";
+import { useViewportHeight } from "../Hooks/useViewportHeight.js";
 const drawerWidth = 240;
 const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   width: 62,
@@ -159,6 +160,7 @@ const Drawer = styled(MuiDrawer, {
 
 export default function MainApp() {
   const theme = useTheme();
+  const viewportHeight = useViewportHeight();
   const [open, setOpen] = React.useState(false);
   const [isClicked, setIsClicked] = React.useState(0);
   const dispatch = useDispatch();
@@ -198,7 +200,6 @@ export default function MainApp() {
   const [appBarHeight, setAppBarHeight] = React.useState(0);
   const [bottomNavHeight, setBottomNavHeight] = React.useState(0);
   const bottomMenu = 8;
-  
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -214,22 +215,32 @@ export default function MainApp() {
   const toggleDarkMode = () => {
     dispatch(toggleTheme());
   };
-    // Ref to attach to the AppBar DOM element
-    const appBarRef = React.useRef(null);
-    const bottomNavRef = React.useRef(null);
-    // useLayoutEffect runs synchronously after DOM mutations
-    React.useLayoutEffect(() => {
-      if (appBarRef.current) {
-        // Get the height from the element's DOMRect and update the state
-        setAppBarHeight(appBarRef.current.getBoundingClientRect().height);
-      }
-      if (bottomNavRef.current) {
-        setBottomNavHeight(bottomNavRef.current.offsetHeight);
-      }
-    }, []);
+  // Ref to attach to the AppBar DOM element
+  const appBarRef = React.useRef(null);
+  const bottomNavRef = React.useRef(null);
+  // useLayoutEffect runs synchronously after DOM mutations
+  React.useLayoutEffect(() => {
+    if (appBarRef.current) {
+      // Get the height from the element's DOMRect and update the state
+      setAppBarHeight(appBarRef.current.getBoundingClientRect().height);
+    }
+    if (bottomNavRef.current) {
+      setBottomNavHeight(bottomNavRef.current.offsetHeight);
+    }
+  }, []);
+  // Set the --vh CSS variable on the document root
+  React.useEffect(() => {
+    document.documentElement.style.setProperty(
+      "--vh",
+      `${viewportHeight * 0.01}px`
+    );
+  }, [viewportHeight]);
 
   return (
-    <Box className='mainAppContainer' sx={{ display: "flex", flexDirection: "row" }}>
+    <Box
+      className="mainAppContainer"
+      sx={{ display: "flex", flexDirection: "row" }}
+    >
       <CssBaseline />
       <AppBar
         position="fixed"
@@ -246,7 +257,7 @@ export default function MainApp() {
             sx={[
               {
                 marginRight: 5,
-                display: { xs: "none", sm: open ?'none' :'block' },
+                display: { xs: "none", sm: open ? "none" : "block" },
               },
               // open && { display: "none" },
             ]}
@@ -332,8 +343,12 @@ export default function MainApp() {
           </ListItem>
         </List>
       </Drawer>
-      <Stack direction={"column"} sx={{width:'100%'}}>
-        <MainContent bottomMenu={bottomMenu} appBarHeight={appBarHeight} bottomNavHeight={bottomNavHeight}/>
+      <Stack direction={"column"} sx={{ width: "100%" }}>
+        <MainContent
+          bottomMenu={bottomMenu}
+          appBarHeight={appBarHeight}
+          bottomNavHeight={bottomNavHeight}
+        />
         <AnimatedBottomNav ref={bottomNavRef} ListData={ListData} />
       </Stack>
     </Box>
