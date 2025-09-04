@@ -1,5 +1,6 @@
 import { LinkedIn } from "@mui/icons-material";
 import myPic from '../assets/mypic.jpg'
+import experiences from "./experiences";
 // import myPic from '../assets/background.png'
 
 const myData = {
@@ -57,7 +58,8 @@ const myData = {
     }
   ],
   preferdLocations:['Hydrabad', 'Banglore', 'Pune', 'Noida','Banglore','Pune','Mumbai'],
-  primarySkills:[ "JavaScript","TypeScript","React.js","Next.js","Redux","Node.js","Express","MongoDB","SQL","Mongoose","MUI","HTML", "CSS","Java","Kotlin","Docker","Jenkins","Terraform"]
+  primarySkills:[ "JavaScript","TypeScript","React.js","Next.js","Redux","Node.js","Express","MongoDB","SQL","Mongoose","MUI","HTML", "CSS","Java","Kotlin","Docker","Jenkins","Terraform"],
+  recentExperiences: [...experiences].filter((_,i)=> i < 2)
 };
 
 export default myData;

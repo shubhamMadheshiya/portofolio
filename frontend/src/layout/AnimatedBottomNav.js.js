@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BottomNavigation, BottomNavigationAction, Paper } from "@mui/material";
+import { BottomNavigation, BottomNavigationAction, Box, Paper } from "@mui/material";
 import { styled } from "@mui/system";
 import { Link } from "react-router-dom";
 
@@ -12,8 +12,8 @@ const AnimatedBottomNav = React.forwardRef(({ ListData }, ref) => {
   };
 
   return (
-    <Paper
-      ref={ref} // Now, the ref is correctly passed to the Paper component
+    <Box
+      ref={ref} // Now, the ref is correctly passed to the Box component
       sx={{
         display: {
           xs: "flex",
@@ -27,7 +27,7 @@ const AnimatedBottomNav = React.forwardRef(({ ListData }, ref) => {
       <BottomNavigation
         value={value}
         onChange={handleChange}
-        sx={{ width: "100%" }}
+        sx={{ width: "100%",pt:2 }}
       >
         {ListData.map((item, index) => (
           <BottomNavigationAction
@@ -41,7 +41,7 @@ const AnimatedBottomNav = React.forwardRef(({ ListData }, ref) => {
           />
         ))}
       </BottomNavigation>
-    </Paper>
+    </Box>
   );
 });
 

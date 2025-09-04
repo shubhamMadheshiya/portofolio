@@ -281,8 +281,8 @@ const App = () => {
       </Card>
 
       {/* About, Skills, Experience, and Education Sections */}
-      <Stack gap={4} p={0} >
-        <Box >
+      <Stack gap={4} p={0}>
+        <Box>
           <Card sx={{ borderRadius: 4 }}>
             <CardContent>
               <Typography variant="h5" sx={{ fontWeight: "bold", mb: 2 }}>
@@ -295,7 +295,7 @@ const App = () => {
           </Card>
         </Box>
 
-        <Box >
+        <Box>
           <Card sx={{ borderRadius: 4 }}>
             <CardContent>
               <Typography variant="h5" sx={{ fontWeight: "bold", mb: 2 }}>
@@ -314,33 +314,43 @@ const App = () => {
           </Card>
         </Box>
 
-        <Box >
+        <Box>
           <Card sx={{ borderRadius: 4 }}>
             <CardContent>
               <Typography variant="h5" sx={{ fontWeight: "bold", mb: 2 }}>
                 <WorkIcon sx={{ verticalAlign: "middle", mr: 1 }} />
                 Experience
               </Typography>
-              {/* <Stack divider={<Divider flexItem />} spacing={2}>
-                  {profile.experience.map((exp, index) => (
-                    <Box key={index} sx={{ py: 1 }}>
-                      <Typography variant="h6" sx={{ fontWeight: "medium" }}>
-                        {exp.title}
-                      </Typography>
-                      <Typography variant="body2" color="text.secondary">
-                        {exp.company} • {exp.duration}
-                      </Typography>
-                      <Typography variant="body2" sx={{ mt: 1 }}>
-                        {exp.description}
-                      </Typography>
-                    </Box>
-                  ))}
-                </Stack> */}
+              <Stack divider={<Divider flexItem />} spacing={2}>
+                {profile.recentExperiences.map((exp, index) => (
+                  <Box key={index} sx={{ py: 1 }}>
+                    <Typography variant="h6" sx={{ fontWeight: "medium" }}>
+                      {exp.title}
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      {exp.company} • {exp.date}
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        mt: 1,
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                        display: "-webkit-box",
+                        WebkitLineClamp: 3, // Change this to your desired number of lines
+                        WebkitBoxOrient: "vertical",
+                      }}
+                    >
+                      {exp.listDis}
+                    </Typography>
+                  </Box>
+                ))}
+              </Stack>
             </CardContent>
           </Card>
         </Box>
 
-        <Box >
+        <Box>
           <Card sx={{ borderRadius: 4 }}>
             <CardContent>
               <Typography variant="h5" sx={{ fontWeight: "bold", mb: 2 }}>
