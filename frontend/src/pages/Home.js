@@ -62,8 +62,8 @@ const Home = () => {
         <Stack
           direction="row"
           flexWrap="wrap"
-          spacing={2}
-          gap={2}
+          // spacing={2}
+          gap={1}
           rowGap={2}
           sx={{ borderRadius: 4 }}
         >
@@ -113,8 +113,8 @@ const Home = () => {
         <Stack
           direction="row"
           flexWrap="wrap"
-          spacing={2}
-          gap={2}
+          // spacing={2}
+          gap={1}
           rowGap={2}
           sx={{ borderRadius: 4 }}
         >
@@ -165,7 +165,7 @@ const Home = () => {
         <Stack
           direction="row"
           flexWrap="wrap"
-          spacing={2}
+          // spacing={2}
           gap={2}
           rowGap={2}
           sx={{ borderRadius: 4 }}
