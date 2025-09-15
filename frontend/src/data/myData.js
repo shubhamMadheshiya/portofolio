@@ -57,7 +57,7 @@ const myData = {
       logo:'https://upload.wikimedia.org/wikipedia/commons/3/3f/R.P.M_Academy.webp'
     }
   ],
-  preferdLocations:['Hydrabad', 'Banglore', 'Pune', 'Noida','Banglore','Pune','Mumbai'],
+  preferdLocations:['Hyderabad', 'Banglore', 'Pune', 'Noida','Gurugram','Delhi','Mumbai'],
   primarySkills:[ "JavaScript","TypeScript","React.js","Next.js","Redux","Node.js","Express","MongoDB","SQL","Mongoose","MUI","HTML", "CSS","Java","Kotlin","Docker","Jenkins","Terraform"],
   recentExperiences: [...experiences].filter((_,i)=> i < 2)
 };

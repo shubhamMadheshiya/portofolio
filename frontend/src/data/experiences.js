@@ -21,7 +21,7 @@ const experiences = [
     dis: "",
   },
   {
-    title: "FullStack Engineer",
+    title: "Full-Stack Developer",
     company: "SHASHANK SAJWAN",
     website: "https://www.shashanksajwan.com/",
     logo: "https://www.shashanksajwan.com/assets/shashank.webp",
