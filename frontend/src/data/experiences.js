@@ -119,7 +119,7 @@ const experiences = [
     date: "Dec 2020 - Jan 2021",
     location: "Noida, UP, India",
     employmentType: "Freelance",
-    jobType: "Onsite",
+    jobType: "Remote",
     listDis: [
       "Conducted comprehensive case studies to gather detailed insights into user needs and project requirements",
       "Created detailed wireframes and strategic planning documents to ensure project alignment with user requirements and business goals",
