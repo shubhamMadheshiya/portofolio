@@ -42,9 +42,9 @@ const myData = {
       nameOfOrg:'Madan Mohan Malviya University of Technology',
       degree:'B.Tech',
       course:'Computer Science',
-      startDate:'Aug 2019',
-      endDate:'Apr 2023',
-      grade:'8.5',
+      startDate:'Aug 2018',
+      endDate:'Apr 2022',
+      grade:'7.81',
       logo:'https://upload.wikimedia.org/wikipedia/en/a/a8/Madan_Mohan_Malaviya_University_of_Technology_logo.png'
     },
     {
