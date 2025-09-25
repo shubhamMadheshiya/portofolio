@@ -27,7 +27,7 @@ const experiences = [
     logo: "https://www.shashanksajwan.com/assets/shashank.webp",
     date: "April 2022 - Jan 2025",
     location: "Dehradun, Uttarakhand, India",
-    employmentType: "Freelance",
+    employmentType: "Full-time",
     jobType: "Remote",
     listDis: [
       "Developed and optimized backend solutions using Node.js and Express, building scalable RESTful APIs that improved data processing speed by 30%",
