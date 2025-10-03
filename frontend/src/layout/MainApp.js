@@ -239,7 +239,7 @@ export default function MainApp() {
   return (
     <Box
       className="mainAppContainer"
-      sx={{ display: "flex", flexDirection: "row" }}
+      sx={{ display: "flex", flexDirection: "row", width: "100%" }}
     >
       <CssBaseline />
       <AppBar

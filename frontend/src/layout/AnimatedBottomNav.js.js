@@ -18,7 +18,7 @@ const AnimatedBottomNav = React.forwardRef(({ ListData }, ref) => {
 
   return (
     <Box
-      // Now, the ref is correctly passed to the Box component
+      ref={ref} // Now, the ref is correctly passed to the Box component
       sx={{
         display: {
           xs: "flex",
@@ -30,10 +30,9 @@ const AnimatedBottomNav = React.forwardRef(({ ListData }, ref) => {
       elevation={4}
     >
       <BottomNavigation
-        ref={ref}
         value={value}
         onChange={handleChange}
-        sx={{ width: "100%",height:"auto", p: 0.5, p:1 }}
+        sx={{ width: "100%", height: "auto", p: 0.5, p: 1 }}
       >
         {ListData.map((item, index) => (
           <BottomNavigationAction
@@ -43,7 +42,7 @@ const AnimatedBottomNav = React.forwardRef(({ ListData }, ref) => {
             icon={item.icon}
             component={Link}
             to={item.link}
-            sx={{ pt: 1, pb: 1, borderRadius: 2 }}
+            sx={{ pt: 1, pb: 1, borderRadius: 2, minWidth: "40px" }}
           />
         ))}
       </BottomNavigation>
