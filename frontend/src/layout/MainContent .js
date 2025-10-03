@@ -57,7 +57,7 @@ const MainContent = ({ bottomNavHeight, appBarHeight }) => {
           sx={{
             position: "fixed",
             right: 40,
-            bottom: 80,
+            bottom: isXs ? 92 : 80,
             zIndex: 1000,
             padding: isXs ? 1 : 2,
           }}
