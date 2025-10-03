@@ -21,6 +21,7 @@ import {
   IconButton,
   CircularProgress,
   Stack,
+  Chip,
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
@@ -137,12 +138,23 @@ const GitHubStats = () => {
   }
 
   return (
-    <Container >
+    <Container>
       <Box mt={4}>
         <Card sx={{ p: 2, borderRadius: 4 }}>
           <CardContent>
-            <Grid container spacing={4} alignItems="center" justifyContent='center'>
-              <Grid item lg={2} sm={12} alignItems="center" justifyContent='center'>
+            <Grid
+              container
+              spacing={4}
+              alignItems="center"
+              justifyContent="center"
+            >
+              <Grid
+                item
+                lg={2}
+                sm={12}
+                alignItems="center"
+                justifyContent="center"
+              >
                 <Avatar
                   src={profile.avatar_url}
                   alt="Profile"
@@ -157,55 +169,76 @@ const GitHubStats = () => {
                 // sx={{ bgcolor: "red" }}
               >
                 <Stack spacing={1}>
-                  <Typography variant="h1">{profile.name}</Typography>
-                  <Typography variant="h3">{profile.login}</Typography>
+                  <Typography variant="h2">{profile.name}</Typography>
+                  <Typography variant="h4" color={"primary"}>
+                    {profile.login}
+                  </Typography>
 
-                  <Grid container maxWidth={480} spacing={2}>
+                  <Grid container maxWidth={480} spacing={1}>
                     <Grid item lg={4} sm={12}>
-                      <Box
+                      <Chip
+                        size="small"
+                        label={<span>Followers: {profile.followers}</span>}
+                      />
+                      {/* <Box
                         component="section"
-                        sx={{
-                         
-                          // p: 1,
-                          // px: 2,
-                          // border: "1px dashed grey",
-                          // borderRadius: 50,
-                        }}
+                        sx={
+                          {
+                            // p: 1,
+                            // px: 2,
+                            // border: "1px dashed grey",
+                            // borderRadius: 50,
+                          }
+                        }
                       >
                         <Typography variant="h3">
                           Followers: {profile.followers}
                         </Typography>
-                      </Box>
+                      </Box> */}
                     </Grid>
                     <Grid item lg={4} sm={12}>
-                      <Box
+                      <Chip
+                        size="small"
+                        label={<span>Following: {profile.following}</span>}
+                      />
+                      {/* <Box
                         component="section"
-                        sx={{
-                          // p: 1,
-                          // px: 2,
-                          // border: "1px dashed grey",
-                          // borderRadius: 50,
-                        }}
+                        sx={
+                          {
+                            // p: 1,
+                            // px: 2,
+                            // border: "1px dashed grey",
+                            // borderRadius: 50,
+                          }
+                        }
                       >
                         <Typography variant="h3">
                           Following: {profile.following}
                         </Typography>
-                      </Box>
+                      </Box> */}
                     </Grid>
                     <Grid item lg={4} sm={12}>
-                      <Box
+                      <Chip
+                        size="small"
+                        label={
+                          <span>Public Repos: {profile.public_repos}</span>
+                        }
+                      />
+                      {/* <Box
                         component="section"
-                        sx={{
-                          // p: 1,
-                          // px: 2,
-                          // border: "1px dashed grey",
-                          // borderRadius: 50,
-                        }}
+                        sx={
+                          {
+                            // p: 1,
+                            // px: 2,
+                            // border: "1px dashed grey",
+                            // borderRadius: 50,
+                          }
+                        }
                       >
                         <Typography variant="h3">
                           Public Repos: {profile.public_repos}
                         </Typography>
-                      </Box>
+                      </Box> */}
                     </Grid>
                   </Grid>
                   {/* <Stack
