@@ -18,6 +18,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LanguageIcon from "@mui/icons-material/Language";
 import myData from "../data/myData";
+import { LocationOn } from "@mui/icons-material";
 // Define a simple profile data structure
 // const initialProfile = {
 //   name: "Jane Doe",
@@ -127,24 +128,69 @@ const App = () => {
             />
 
             {/* Name and Title */}
-            <Typography
-              variant="h2"
-              // component="h1"
-              sx={{ fontWeight: "bold" }}
+            <Stack
+              direction={"row"}
+              justifyContent={"space-between"}
+              sx={{ width: "100%" }}
+              flexWrap={"wrap"}
+              gap={2}
+             
             >
-              {profile.name}
-            </Typography>
-            <Typography
-              variant="h4"
-              color="text.secondary"
-              textAlign={"left"}
-              sx={{ mb: 1 }}
-            >
-              {profile.bio}
-            </Typography>
-            <Typography variant="body1" color="text.secondary" sx={{ mb: 2 }}>
+              <Box>
+                <Typography
+                  variant="h2"
+                  // component="h1"
+                  textAlign={"left"}
+                  sx={{ fontWeight: "bold" }}
+                >
+                  {profile.name}
+                </Typography>
+                <Typography
+                  variant="h4"
+                  color="text.secondary"
+                  textAlign={"left"}
+                  sx={{ mb: 1 }}
+                >
+                  {profile.bio}
+                </Typography>
+              </Box>
+              <Stack direction={'row'} gap={4}  flexWrap={"wrap"}>
+                <Stack direction={"row"} alignItems={"center"} gap={2}>
+                  <Avatar alt="Remy Sharp" src={profile.recentExperiences[0].logo} />
+                  <Box>
+                    <Typography variant="h3" textAlign={"left"}>
+                      {profile.recentExperiences[0].company}
+                    </Typography>
+                    <Typography
+                      variant="h4"
+                      textAlign={"left"}
+                      color="text.secondary"
+                    >{`${profile.recentExperiences[0].title} - ${profile.recentExperiences[0].employmentType}`}</Typography>
+                  </Box>
+                </Stack>
+                <Stack direction={"row"} alignItems={"center"} gap={2}>
+                  <Avatar alt="Remy Sharp" src={profile.educations[0].logo} />
+                  <Box>
+                    <Typography variant="h3" textAlign={"left"}>
+                      {profile.educations[0].nameOfOrg}
+                    </Typography>
+                    <Typography
+                      variant="h4"
+                      textAlign={"left"}
+                      color="text.secondary"
+                    >{`${profile.educations[0].degree} - ${profile.educations[0].course}`}</Typography>
+                  </Box>
+                </Stack>
+              </Stack>
+            </Stack>
+            <Chip
+                    icon={<LocationOn />}
+                    label= {profile.city}
+                    sx={{ borderRadius: 2 , my:4}}
+                  />
+            {/* <Typography variant="body1" color="text.secondary" sx={{ m: 2 }}>
               {profile.city}
-            </Typography>
+            </Typography> */}
 
             {/* Open to Work Badge */}
             <Stack
