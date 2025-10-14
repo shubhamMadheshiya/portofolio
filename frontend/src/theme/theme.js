@@ -58,7 +58,7 @@ const theme = (mode) =>
       },
       background: {
         default: mode === "dark" ? "#001E2B" : "#F4F6F8",
-        paper: mode === "dark" ? "#112733" : "#FFFFFF",
+        paper: mode === "dark" ? "#21313c" : "#FFFFFF",
       },
       hover: {
         primary: {
